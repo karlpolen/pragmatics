@@ -1,0 +1,263 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Pragmatics of Private Markets Investing
+\end_layout
+
+\begin_layout Author
+Karl Polen
+\end_layout
+
+\begin_layout Section
+Introduction and Background
+\end_layout
+
+\begin_layout Standard
+This paper discusses quantitative and other methods which may be useful
+ in structuring a private markets investing program.
+ Private markets approaches have grown dramatically in recent decades with
+ multi-trillion dollar markets available through vehicles sponsored by groups
+ marketing to the institutional and, increasingly, the high net worth community.
+ These investments pose unique challenges for those charged with managing
+ them requiring methods specialized for the structure of the investments.
+ A selection of these methods is presented here and code for implementing
+ them is provided in an accompanying Github site.
+\end_layout
+
+\begin_layout Standard
+This article refers to experience at the Arizona State Retirement System
+ where the author is the Chief Investment Officer.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+While I work for ASRS as CIO, this work and the views it expresses are my
+ own.
+ The policies of ASRS are set in accordance with its governance policy and
+ may be different from what is stated here.
+ Any information about ASRS is drawn from public information readily available
+ on its website.
+ As a matter of style, I use 
+\begin_inset Quotes eld
+\end_inset
+
+we
+\begin_inset Quotes erd
+\end_inset
+
+ rather than 
+\begin_inset Quotes eld
+\end_inset
+
+I
+\begin_inset Quotes erd
+\end_inset
+
+ in the article.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+We
+\begin_inset Quotes erd
+\end_inset
+
+ refers to myself and like-minded people engaged in institutional private
+ markets investing, not necessarily to ASRS.
+\end_layout
+
+\end_inset
+
+As it was building its private markets investing program, ASRS found a dearth
+ of tools for performance measurement and cost analysis.
+ While commercially available tools for performance assessment have increased
+ markedly in recent years, there is still a need for better tools to understand
+ cost.
+ This article presents some possible approaches to address these needs.
+\end_layout
+
+\begin_layout Section
+Strategy
+\end_layout
+
+\begin_layout Standard
+As investors we learn we learn about strategy in the context of strategic
+ asset allocation; i.e.
+ the proportion of assets allocated to risks and associated premia related
+ to equities, rates, credit, real estate and so forth.
+ These decisions are the most important determinant of outcomes, at least
+ after the fact.
+ As important as this is, we are using the word 
+\begin_inset Quotes eld
+\end_inset
+
+strategy
+\begin_inset Quotes erd
+\end_inset
+
+ in a different way.
+ We are referring to business strategy.
+\end_layout
+
+\begin_layout Standard
+You can think of business strategy is an antonym to luck.
+ It answers the question 
+\begin_inset Quotes eld
+\end_inset
+
+how do we earn the profits we make.
+\begin_inset Quotes erd
+\end_inset
+
+ You earn them because somebody values what you do and you do it well.
+\end_layout
+
+\begin_layout Standard
+The history of private markets institutional investing goes back to the
+ 1980s and 1990s.
+ In those days, mere liquidity was a strategy.
+ When the market suffered dislocations, for example in the RTC crisis of
+ the early 90s, private capital seized on opportunities that were wildly
+ mispriced.
+ The RTC saw its mission as rapidly resolving failed S&Ls and they auctioned
+ the assets individually and in pools to a market that simply was not structural
+ly organized to absorb the volume of assets delivered.
+ 
+\end_layout
+
+\begin_layout Standard
+The extraordinary returns earned from these times attracted additional capital
+ and a private equity and private credit industry has organized itself globally
+ with investment capacity measured in trillions of dollars.
+ Private capital is now deeply embedded in the structure of capital markets
+ and an effective competitor to public markets.
+ It used to be that once a company reached a billion or so in enterprise
+ value, its only option to raise capital for growth was in public markets.
+ Following various crises of the last thirty years, regulation of public
+ companies and the increasing presence of activist shareholders has increased
+ the cost of going public and the reduced the attractiveness of it.
+ In the meantime, the availability of private capital and the competitiveness
+ of private markets with multiple firms bidding on deals has made it feasible
+ and efficient to finance firms to mid-cap and even large-cap range outside
+ public markets.
+ This is a self-reinforcing cycle leading to continued growth in private
+ capital as investors seek access to these opportunities.
+ 
+\end_layout
+
+\begin_layout Standard
+In this context, liquidity and savvyness about discerning value and opportunity
+ are still needed but no longer sufficient.
+ The sheer size of private markets ensures competitive bidding for pretty
+ much anything that comes to market.
+ In order to continue to earn excess returns, the best private capital firms
+ have invested in their firms to create ever deeper expertise in the markets
+ they address.
+ They use this expertise to create strategic advantage to generate or gain
+ access to deals and to formulate and execute business strategy for cmpanies
+ or properties owned.
+ 
+\end_layout
+
+\begin_layout Section
+Organization
+\end_layout
+
+\begin_layout Section
+Track Record
+\end_layout
+
+\begin_layout Section
+Terms
+\end_layout
+
+\begin_layout Section
+Summary and Conclusion
+\end_layout
+
+\begin_layout Section
+Optional Section Concerning Computer Code for Quantitative Methods
+\end_layout
+
+\end_body
+\end_document
