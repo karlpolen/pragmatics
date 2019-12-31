@@ -1386,7 +1386,1286 @@ ggplot(stats.df2,aes(x=ind.irr,y=irr,label=name,colour=kspme))+
 \end_layout
 
 \begin_layout Section
-Terms
+Understanding and Analyzing Cost
+\end_layout
+
+\begin_layout Standard
+This is a quick and dirty analyzer of general partner compensation in real
+ estate and private equity partnerships.
+ It analyzes the outcomes across a range of performance scenarios in single
+ period investment context.
+ It is useful for analyzing the sharing of income between the GP and investors
+ as income varies.
+ Files for this post are found at https://github.com/karlpolen/waterfallqd
+\end_layout
+
+\begin_layout Subsection
+Background 
+\end_layout
+
+\begin_layout Standard
+Real estate and private equity investments are typically owned in a partnership
+ which includes a general partner (the "sponsor") and limited partners ("investo
+rs").
+ The sponsor organizes the investment, recruits the investors and manages
+ the assets.
+ The general partner is typically compensated with an asset management fee
+ and an incentive fee.
+\end_layout
+
+\begin_layout Standard
+The asset management fee is usually stated as a percent per annum of assets
+ under management.
+ This can be either as a percent of "commited" capital or "invested" capital.
+ In the former case, the fee is earned based on the amount the investors
+ commit from the inception of the partnership without regard to when the
+ capital is called.
+ If the asset management fee is based on invested capital, then the fee
+ is calculated only on capital which has been called.
+ 
+\end_layout
+
+\begin_layout Standard
+The asset management fee is generally not contingent on performance, but
+ on occasion investors can negotiate a deferral of a portion of an asset
+ management fee until a minimum investment hurdle rate of return is achieved.
+ There is a great deal of variation in these arrangements and a person tasked
+ with analyzing a partnership will need to refer to the partnership documents.
+\end_layout
+
+\begin_layout Standard
+In this post we only consider the case of asset management fees on invested
+ capital, but we allow a portion of the fee to be deferred based on performance.
+ In a later post, we will consider more complex structures in a multi-period
+ project environment.
+\end_layout
+
+\begin_layout Standard
+The incentive fee ("carry") is typically stated as a percent of profits.
+ Profits are normally defined as the gross profits of the investments after
+ returning partnership expenses including the asset management fee.
+ Usually, a hurdle rate of return must be achieved before sharing begins.
+ So, a typical deal might be stated as "20% carry over an 8% pref with a
+ 50% catchup".
+ This means that the partnership has to earn at least 8% return before the
+ sponsor earns any carry.
+ Above an 8% return, the sponsor gets half the profit (i.e.
+ the catchup is 50%) until the ratio of profit split is 20% to sponsor.
+ Thereafter, the profits are split 80% to the investors and 20% to the sponsor.
+ Although the catchup is negotiable, usually from 50% to 100%, this is the
+ nearly universal structure of private equity sponsor compensation.
+\end_layout
+
+\begin_layout Standard
+Real estate deals have greater variation.
+ Many real estate deals have multiple layers, but no catchup.
+ So, a real estate deal might be stated as "20 over 8, 30 over 12 and 50
+ over 20".
+ Stated this way, sponsor starts sharing 20% of profits once the investor
+ earned an 8% return, switching to 30% of profits once the investor has
+ earned a 12% return and 50% of profits once the investor has earned a 20%
+ return.
+ There is no catchup in this structure, but between the 8% and 12% hurdle
+ sponsor carry starts to drag on return and the gross return needs to be
+ higher than 12% before the the next level of carry kicks in.
+\end_layout
+
+\begin_layout Subsection
+Private Equity Example
+\end_layout
+
+\begin_layout Standard
+Let's revisit the typical private equity structure ("20 over 8 with a 50%
+ catchup").
+ We will add a 2% asset management fee and consider the sharing of cash
+ in the context of an investment with a hold period of exactly one year.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Level 0 -- the investment 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<PE1, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+inv=100 
+\end_layout
+
+\begin_layout Plain Layout
+
+am=2 
+\end_layout
+
+\begin_layout Plain Layout
+
+capital=inv+am 
+\end_layout
+
+\begin_layout Plain Layout
+
+pref=capital*.08 
+\end_layout
+
+\begin_layout Plain Layout
+
+@  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Invest $100 in an asset.
+ In addition, the investor has to pay the asset management fee of $2.
+ So, they have invested $102
+\end_layout
+
+\begin_layout Standard
+We now illustrate the distribution of cash with a sale of the investment
+\end_layout
+
+\begin_layout Subsubsection
+level 1 -- return of capital
+\end_layout
+
+\begin_layout Standard
+The first $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{capital}
+\end_layout
+
+\end_inset
+
+ goes to pay back the investor's capital -- 
+\backslash
+$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{capital}
+\end_layout
+
+\end_inset
+
+ cumulative cash, 2% gross return, 0% net return
+\end_layout
+
+\begin_layout Subsubsection
+level 2 -- pay pref
+\end_layout
+
+\begin_layout Standard
+The next 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{pref}
+\end_layout
+
+\end_inset
+
+ dollars goes to cover the "pref" of 8%.
+ $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{capital+pref}
+\end_layout
+
+\end_inset
+
+ cumulative cash.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(100*(capital+pref-inv)/inv,1)}
+\end_layout
+
+\end_inset
+
+% gross return, 8% net return
+\end_layout
+
+\begin_layout Subsubsection
+level 3 -- catchup
+\end_layout
+
+\begin_layout Standard
+We now start splitting 50/50 until the sponsor has 20% of the distributed
+ profit
+\end_layout
+
+\begin_layout Standard
+Here we have a simple algebra problem
+\end_layout
+
+\begin_layout Standard
+We are looking for a value of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{.5x}{
+\backslash
+Sexpr{pref}+x}=.2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's solve for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x=
+\backslash
+Sexpr{.4*pref}+.4x$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$.6x=
+\backslash
+Sexpr{.4*pref}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x=
+\backslash
+frac{
+\backslash
+Sexpr{.4*pref}}{.6} = 
+\backslash
+Sexpr{round(.4*pref/.6,2)}$$
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<PE2, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+x=round(.4*pref/.6,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, the next 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{x}
+\end_layout
+
+\end_inset
+
+ dollars are distributed 50/50.
+\end_layout
+
+\begin_layout Standard
+At this point, $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{capital+pref+x}
+\end_layout
+
+\end_inset
+
+ has been distributed, of which $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(.5*x,2)}
+\end_layout
+
+\end_inset
+
+ went to the sponsor as incentive fee.
+ The gross return is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(100*(-1+((capital+pref+x)/inv)),1)}
+\end_layout
+
+\end_inset
+
+% and the investor has received a net return of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(100*(-1+((capital+pref+(.5*x))/100)),1)}
+\end_layout
+
+\end_inset
+
+%.
+\end_layout
+
+\begin_layout Subsubsection
+level 4 -- parri passu
+\end_layout
+
+\begin_layout Standard
+Remaining cash is distributed 80/20.
+ Suppose the asset is sold for $130.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<PE3,echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+price=130 
+\end_layout
+
+\begin_layout Plain Layout
+
+profit=price-inv 
+\end_layout
+
+\begin_layout Plain Layout
+
+grossroi=round(100*profit/inv,1) 
+\end_layout
+
+\begin_layout Plain Layout
+
+lpshare=.8*(price-capital) 
+\end_layout
+
+\begin_layout Plain Layout
+
+lproi=round(100*lpshare/capital,1) 
+\end_layout
+
+\begin_layout Plain Layout
+
+gpshare=.2*(price-capital)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The limited partner receives $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{capital}
+\end_layout
+
+\end_inset
+
+ return of capital plus $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{lpshare}
+\end_layout
+
+\end_inset
+
+.
+ The sponsor receives $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{gpshare}
+\end_layout
+
+\end_inset
+
+ incentive fee in addition to the $
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{am}
+\end_layout
+
+\end_inset
+
+ it received as an asset management fee.
+\end_layout
+
+\begin_layout Standard
+The gross return on the investment is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{grossroi}
+\end_layout
+
+\end_inset
+
+%.
+ The net return to the investor is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{lproi}
+\end_layout
+
+\end_inset
+
+%.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe4,echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+source('waterfallqd.r')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+peinv=100 
+\end_layout
+
+\begin_layout Plain Layout
+
+pecap=102 
+\end_layout
+
+\begin_layout Plain Layout
+
+dmat.pe=data.frame(am=0,pref=(.08*pecap),catchup=.5,carry=.2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ans.pe=waterfall(dmat.pe,ret=seq(100,130,.1),invcost=peinv,capital=pecap) 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is a plot that shows the share going to sponsor and investor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe6,fig.width=7, fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(ans.pe$grossreturn,ans.pe$grossreturn,type='l',col='red',xlab='Gross
+ Return',ylab='Return')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lines(ans.pe$grossreturn,ans.pe$netreturn,type='l',col='blue') 
+\end_layout
+
+\begin_layout Plain Layout
+
+legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
+) 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This plot shows the share of profit going to the GP on the margin.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe7,fig.width=7, fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+deltaprofit=diff(ans.pe$grossreturn) 
+\end_layout
+
+\begin_layout Plain Layout
+
+deltagp=diff(ans.pe$grossreturn-ans.pe$netreturn) 
+\end_layout
+
+\begin_layout Plain Layout
+
+gpcut=100*deltagp/deltaprofit 
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(ans.pe$grossreturn[-1],gpcut, main=('Marginal Share of Return to Sponsor'),
+ xlab='Gross Return', ylab='Percent',type='l',col='blue')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As you can see, the share to the GP increases to 50% during the catchup
+ phase.
+ It then drops to 20% for returns above the breakeven where the GP has 20%
+ of the cumulative profits.
+\end_layout
+
+\begin_layout Standard
+Let's do the same for the real estate example.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe8>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reinv=100 
+\end_layout
+
+\begin_layout Plain Layout
+
+recap=101 
+\end_layout
+
+\begin_layout Plain Layout
+
+dmat.re=data.frame(am=c(0,1,0),pref=c(.08,.12,.20)*recap,catchup=c(0,0,0),carry=c(.2,.3
+,.5))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ans.re=waterfall(dmat.re,ret=seq(100,130,.1),invcost=reinv,capital=recap)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is a plot that shows the share going to sponsor and investor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe9,fig.width=7, fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(ans.re$grossreturn,ans.re$grossreturn,type='l',col='red',xlab='Gross
+ Return',ylab='Return')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lines(ans.re$grossreturn,ans.re$netreturn,type='l',col='blue') 
+\end_layout
+
+\begin_layout Plain Layout
+
+legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
+) 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This plot shows the share of profit going to the GP on the margin.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<pe10,fig.width=7, fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+deltaprofit=diff(ans.re$grossreturn) 
+\end_layout
+
+\begin_layout Plain Layout
+
+deltagp=diff(ans.re$grossreturn-ans.re$netreturn) 
+\end_layout
+
+\begin_layout Plain Layout
+
+gpcut=100*deltagp/deltaprofit 
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(ans.re$grossreturn[-1],gpcut, main=('Marginal Share of Return to Sponsor'),
+ xlab='Gross Return', ylab='Percent',type='l',col='blue')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As you can see, the GP share spikes when they recover their share of the
+ deferred management fee, then follows the stairstep of 20%, 30% and 50%
+ shares of profit above the hurdle rates delivered to the investor.
+\end_layout
+
+\begin_layout Subsection
+Consideration of skewness
+\end_layout
+
+\begin_layout Standard
+As a refresher, the following code uses a function `waterfall` discussed
+ in the earlier post to calculate gross and net returns for a partnership
+ with a 1.5% management and incentive of 20% over an 8% preferred return
+ with an 80% catchup.
+ We plot the comparative returns and the fee paid to the sponsor as a function
+ of gross return.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<skew1>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+dmat.df=data.frame(am=1.5,pref=8,catchup=.8,carry=.2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ret=100+seq(-20,30,.1) 
+\end_layout
+
+\begin_layout Plain Layout
+
+wat=waterfall(dmat.df,ret) 
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(wat$grossreturn,wat$grossreturn,col='red',type='l',main='Gross and
+ Net Returns', ylab='Return',xlab='Gross Return')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lines(wat$grossreturn,wat$netreturn,col='blue') 
+\end_layout
+
+\begin_layout Plain Layout
+
+legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Calculating net returns given a probability distribution assumption for
+ gross returns
+\end_layout
+
+\begin_layout Standard
+We can also use the waterfall function to calculate net returns assuming
+ a probability distribution of gross returns.
+ Suppose we think gross returns are normally distributed, with a mean of
+ 15% and standard deviation of 15%.
+ How are the net returns distributed?
+\end_layout
+
+\begin_layout Standard
+In order to do this, we are going to create a set of gross returns that
+ are distributed according to the above assumption.
+ The R language has native capability for this and we simply use the `dnorm`
+ function to build the distribution.
+ We consider cases plus or minus 3 standard deviations from the mean.
+ Note the use of `rep` to replicate more likely values to give them appropriate
+ weight in the distribution.
+ Then you calculate the returns using the waterfall function.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<skew2>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+mu=15 
+\end_layout
+
+\begin_layout Plain Layout
+
+sd=15 
+\end_layout
+
+\begin_layout Plain Layout
+
+ret.seq=seq(mu-3*sd,mu+3*sd,.1) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ret.den=dnorm(ret.seq,mu,sd) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ret.count=round(1000*ret.den) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ret2=100+rep(ret.seq,ret.count) 
+\end_layout
+
+\begin_layout Plain Layout
+
+wat2=waterfall(dmat.df,ret2)
+\end_layout
+
+\begin_layout Plain Layout
+
+with(wat2,plot(density(netreturn),col='blue',main='Return Density',xlab='Gross
+ Return')) 
+\end_layout
+
+\begin_layout Plain Layout
+
+with(wat2,lines(density(grossreturn),col='red')) 
+\end_layout
+
+\begin_layout Plain Layout
+
+legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we plot a cumulative density function.
+ Note the use of `ecdf` to calculate an empirical density on the net returns.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<skew3>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+with(wat2,plot(ecdf(netreturn),col='blue',pch=20, main='Cumulative Density',xlab
+='Gross Return')) 
+\end_layout
+
+\begin_layout Plain Layout
+
+lines(ret.seq,pnorm(ret.seq,mu,sd),col='red',lwd=3) 
+\end_layout
+
+\begin_layout Plain Layout
+
+legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=3
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next we calculate the distribution of fees, i.e.
+ the difference between gross and net returns.
+ Note the use of `from` in the `density` function to cut off values below
+ the minimum fee, which is the asset management fee.
+ Contractually, the fees are never lower than that.
+ I've added a vertical dotted line at the mean fee.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<skew4>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+fee=wat2$grossreturn-wat2$netreturn 
+\end_layout
+
+\begin_layout Plain Layout
+
+mean.fee=mean(fee) 
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(density(fee,from=min(fee)),col='purple',lwd=2, main='Fee Drag Distribution
+\backslash
+nGross Return minus Net Return', xlim=c(1,14))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+abline(v=mean.fee,lty='dotted',col='purple') 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Cost Effectiveness
+\end_layout
+
+\begin_layout Standard
+We will analyze fee effictiveness in a typical PE structure using tools
+ in the asrsMethods library.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<ce1,message=FALSE, warning=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+#library(asrsMethods,quietly=TRUE, verbose=FALSE) 
+\end_layout
+
+\begin_layout Plain Layout
+
+library(ggplot2,quietly=TRUE,verbose=FALSE) 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's setup a PE investment with market standard terms of 1.5% asset management
+ fee, 20% carry over an 8% hurdle with an 80% catchup.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<ce2,warning=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+dmat.pe=data.frame(am=1.5,pref=8,catchup=.8,carry=.2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ans.pe=waterfall(dmat.pe,ret=seq(100,130,.1)) 
+\end_layout
+
+\begin_layout Plain Layout
+
+df=data.frame(Gross_Return=ans.pe$grossreturn,Net_Return=ans.pe$netreturn)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Fee=df$Gross_Return-df$Net_Return 
+\end_layout
+
+\begin_layout Plain Layout
+
+bench=8
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Excess_Return=df$Gross_Return-bench 
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Excess_Return[df$Excess_Return<=0]=NA 
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Slice_to_GP=pmin(1,df$Fee/df$Excess_Return) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(df,aes(x=Gross_Return,y=Fee))+geom_line() 
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<ce3,warning=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(df,aes(x=Gross_Return,y=Slice_to_GP)) + geom_line()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
