@@ -2668,12 +2668,153 @@ ggplot(df,aes(x=Gross_Return,y=Slice_to_GP)) + geom_line()
 
 \end_layout
 
-\begin_layout Section
-Summary and Conclusion
+\begin_layout Subsection
+Negotiating terms to manage cost
+\end_layout
+
+\begin_layout Standard
+The primary cost drivers in this type of investment are what we have already
+ discussed.
+ In an effort, to negotiate and reduce cost here are some suggestions on
+ where to direct your focus.
+\end_layout
+
+\begin_layout Standard
+Pay close attention to the catch-up provisions.
+ Assuming your incentive fee is 20 over 8 and a reasonably successful investment
+ program, the catchup will add 1.6% per year to the investment cost.
+ While this would be considered market standard in many contexts, it may
+ at times be negotiable.
+ The catchup has the biggest impact in the return band of 9% to 12% gross
+ returns, where the catchup is paid.
+ If this is an interemediate return strategy (as much real estate and credit
+ strategies will be) you need to consider whether this is acceptable to
+ you.
+ Negotiated solutions might be elimination of the catchup, possibly in considera
+tion for a lower hurdle or the addition of higher incentive structures for
+ exceptional as in the real estate structure described above.
+\end_layout
+
+\begin_layout Standard
+Asset management fees are charged on either 
+\begin_inset Quotes eld
+\end_inset
+
+committed
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+invested
+\begin_inset Quotes erd
+\end_inset
+
+ capital.
+ In the former case you pay a fee on the full amount of capital committed
+ whether or not it has been called.
+ Assuming investments are made ratably over the first three years of the
+ partnership, this adds 1.5 times the annual fee rate over the life of the
+ fund.
+ Assuming an annual fee rate of 1.5% and weighted average duration of investments
+ of eight years, the annual additional cost is a little less then 30bp per
+ year.
+ This is a fraction of the cost of the catchup, but still important.
+ You need to keep in mind the whole picture.
+ If your manager is smaller, they may need the early revenue to support
+ a proper team for your strategy and you might better serve yourself by
+ focusing on other areas for cost savings.
+ But compromises may be available in the form of reduced fees on committed
+ capital or performance based fees that link fees to achieved operational
+ results.
+\end_layout
+
+\begin_layout Standard
+Finally, you should pay careful attention to what services are funded by
+ the asset management fees and what services are charged as additional fund
+ expenses to the partnership or charged to the deals.
+ Read the manager's 
+\begin_inset Quotes eld
+\end_inset
+
+ADV
+\begin_inset Quotes erd
+\end_inset
+
+ forms filed with the SEC.
+ There is a lot of useful disclosure here.
+ 
+\end_layout
+
+\begin_layout Subsection
+When Alignment of Interest Fails
+\end_layout
+
+\begin_layout Standard
+By sharing profits with an asset manager, you achieve alignment of interest
+ with them.
+ At least while things are going well.
+ The system falls apart with underperforming investments.
+ With underperforming investments there is no incentive for the manager
+ to wrap up the partnership.
+ In fact, the manager is better off avoiding asset sales to continue the
+ asset management fees and for the option value on the incentive fee in
+ case the asset recovers.
+ The investor may well prefer to wrap things up and recover their capital
+ from an underperforming investor in order to move on to the next thing.
+\end_layout
+
+\begin_layout Standard
+The situation is exacerbated when incentive fees are paid on a deal by deal
+ basis.
+ In that case if the manager has sold profitable deals early in the partnership
+ and collected incentive fees for them they may owe the partnership money
+ for a 
+\begin_inset Quotes eld
+\end_inset
+
+clawback
+\begin_inset Quotes erd
+\end_inset
+
+ on liquidation of the partnership to the extent fees initially advanced
+ for early deals are higher than ultimately earned.
+ This provides a powerful additional incentive to delay final liquidation.
+\end_layout
+
+\begin_layout Standard
+For an investor in a program constructed of traditional closed end fund
+ partnership interests there is little defense against these problems other
+ than a well diversified portfolio with multiple managers, strategies and
+ vintages.
+ In that structure any problems will be mitigated and you can gradually
+ weed out any managers who handle tough situations more to their own advantage.
+\end_layout
+
+\begin_layout Standard
+However, if you are a larger investor you may be able to structure investments
+ as large 
+\begin_inset Quotes eld
+\end_inset
+
+separate accounts
+\begin_inset Quotes erd
+\end_inset
+
+ on custom terms.
+ In those structures, you may be able to negotiate provisions in favor of
+ the investor for discretionary termination of investment periods, custom
+ mandatory investment criteria and ability to direct liquidation of all
+ or part of the assets.
+ This approach is much more management intensive and requires specialized
+ expertise to implement, but can add significant value in reduced cost and
+ reliably aligned interests.
 \end_layout
 
 \begin_layout Section
-Optional Section Concerning Computer Code for Quantitative Methods
+Summary and Conclusion
 \end_layout
 
 \end_body
