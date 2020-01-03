@@ -155,8 +155,8 @@ LaTeX
 
 \end_inset
 
- for formatting results.
- For those interested, the code for this article is found at 
+ for formatting results and preparing reports, including this article.
+ The code for this article is found at 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/karlp-asrs/pragmatics"

@@ -120,14 +120,18 @@ ing of strategies and firms.
  and subjective.
  However, I also present some analytical methods that I think are useful
  in support of the decision process.
- I write this article partly in service to younger analysts who may be tasked
+ 
+\end_layout
+
+\begin_layout Standard
+I write this article partly in service to younger analysts who may be tasked
  with implementing these quantitative methods.
  My experience is that people find these calculations difficult at the outset
  and struggle to get their arms around them.
  I provide detailed examples, work through the formulas and calculations
  and, for those interested, code to automate the calculations.
- I always advise young to people interested in investments to learn some
- coding and hope a few might be motivated by this article.
+ I always advise young people interested in investments to learn some coding
+ and hope a few might be motivated by this article.
  If you learn to code in an advanced language like R or Python, it will
  open new avenues for your analytical work, will vastly improve your productivit
 y and will protect the future of your career as forces of automation and
@@ -160,7 +164,9 @@ literal "false"
 
 \end_inset
 
-
+.
+ The github site contains some additional resources and instructions to
+ help you get started.
 \end_layout
 
 \end_inset
