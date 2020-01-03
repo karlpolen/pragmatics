@@ -120,18 +120,14 @@ ing of strategies and firms.
  and subjective.
  However, I also present some analytical methods that I think are useful
  in support of the decision process.
- 
-\end_layout
-
-\begin_layout Standard
-I write this article partly in service to younger analysts who may be tasked
+ I write this article partly in service to younger analysts who may be tasked
  with implementing these quantitative methods.
  My experience is that people find these calculations difficult at the outset
  and struggle to get their arms around them.
  I provide detailed examples, work through the formulas and calculations
  and, for those interested, code to automate the calculations.
- I always advise young people interested in investments to learn some coding
- and hope a few might be motivated by this article.
+ I always advise young to people interested in investments to learn some
+ coding and hope a few might be motivated by this article.
  If you learn to code in an advanced language like R or Python, it will
  open new avenues for your analytical work, will vastly improve your productivit
 y and will protect the future of your career as forces of automation and
@@ -164,9 +160,7 @@ literal "false"
 
 \end_inset
 
-.
- The github site contains some additional resources and instructions to
- help you get started.
+
 \end_layout
 
 \end_inset
@@ -1106,8 +1100,7 @@ tail(pedata)
 
 \begin_layout Standard
 Next we download the Russell 2000 index from Yahoo finance.
- R can handle other data services, but we use Yahoo because it's available
- to anybody at no charge.
+ R can
 \end_layout
 
 \begin_layout Standard
@@ -1155,7 +1148,49 @@ r2k=na.locf(merge(r2k,
 \end_layout
 
 \begin_layout Standard
-We now 
+The variable 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{r2k}
+\end_layout
+
+\end_inset
+
+ is returned from 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{get.hist.quote}
+\end_layout
+
+\end_inset
+
+ as a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{zoo}
+\end_layout
+
+\end_inset
+
+ object.
+ We convert it to a data frame with a variable name for the date value that
+ matches the date value variable name in the private equity data set.
+ We can then 
 \begin_inset ERT
 status open
 
@@ -1168,8 +1203,8 @@ texttt{merge}
 
 \end_inset
 
- the index data with the private equity data set so that each entry in the
- data set has its related market index value.
+ it with the private equity data set so that each entry in the data set
+ has its related market index value.
  
 \end_layout
 
@@ -1285,8 +1320,11 @@ texttt{pelist}
 .
  The code for all the functions used in this post are listed at the end
  of the post.
- Having done the hard work of preparing the data for analysis, we can now
- calculate the performance statistics with only two lines of code.
+\end_layout
+
+\begin_layout Standard
+You can calculate the performance statistics and present them in a table
+ as follows 
 \end_layout
 
 \begin_layout Standard
@@ -1324,8 +1362,13 @@ round(stats.df,3)
 \end_layout
 
 \begin_layout Standard
-Here is an example of a way to graphically present the results.
- 
+Here is an example of a way to plot the results.
+ The x axis is the market return, as if invested in Russell 2000.
+ The y axis is the fund return.
+ A line is provided with slope of 1 and intercept through the origin.
+ Funds above this line have outperformed their public market benchmark.
+ The fund names are printed in a color code indicating the value of KSPME
+ for the fund.
 \end_layout
 
 \begin_layout Standard

@@ -93,67 +93,112 @@ Introduction and Background
 \end_layout
 
 \begin_layout Standard
-This paper discusses quantitative and other methods which may be useful
- in structuring a private markets investing program.
- Private markets approaches have grown dramatically in recent decades with
- multi-trillion dollar markets available through vehicles sponsored by groups
- marketing to the institutional and, increasingly, the high net worth community.
- These investments pose unique challenges for those charged with managing
- them requiring methods specialized for the structure of the investments.
- A selection of these methods is presented here and code for implementing
- them is provided in an accompanying Github site.
-\end_layout
-
-\begin_layout Standard
-This article refers to experience at the Arizona State Retirement System
- where the author is the Chief Investment Officer.
+In this paper I share views I have developed about investing in private
+ markets during thirty years of private sector experience followed by ten
+ years in an institutional environment.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-While I work for ASRS as CIO, this work and the views it expresses are my
- own.
+I have worked for the Arizona State Retirement System for the last ten years,
+ initially as Head of Private Markets Investing and as CIO for the last
+ 4 years.
+ While I work for ASRS as CIO, this work and the views it expresses are
+ my own.
  The policies of ASRS are set in accordance with its governance policy and
  may be different from what is stated here.
  Any information about ASRS is drawn from public information readily available
  on its website.
- As a matter of style, I use 
-\begin_inset Quotes eld
-\end_inset
-
-we
-\begin_inset Quotes erd
-\end_inset
-
- rather than 
-\begin_inset Quotes eld
-\end_inset
-
-I
-\begin_inset Quotes erd
-\end_inset
-
- in the article.
  
-\begin_inset Quotes eld
-\end_inset
-
-We
-\begin_inset Quotes erd
-\end_inset
-
- refers to myself and like-minded people engaged in institutional private
- markets investing, not necessarily to ASRS.
 \end_layout
 
 \end_inset
 
-As it was building its private markets investing program, ASRS found a dearth
- of tools for performance measurement and cost analysis.
- While commercially available tools for performance assessment have increased
- markedly in recent years, there is still a need for better tools to understand
- cost.
- This article presents some possible approaches to address these needs.
+These views incorporate a framework for investment decision making and underwrit
+ing of strategies and firms.
+ The process for assessing strategies and firms is unavoidably qualitative
+ and subjective.
+ However, I also present some analytical methods that I think are useful
+ in support of the decision process.
+ I write this article partly in service to younger analysts who may be tasked
+ with implementing these quantitative methods.
+ My experience is that people find these calculations difficult at the outset
+ and struggle to get their arms around them.
+ I provide detailed examples, work through the formulas and calculations
+ and, for those interested, code to automate the calculations.
+ I always advise young to people interested in investments to learn some
+ coding and hope a few might be motivated by this article.
+ If you learn to code in an advanced language like R or Python, it will
+ open new avenues for your analytical work, will vastly improve your productivit
+y and will protect the future of your career as forces of automation and
+ artificial intelligence rapidly advance in our industry.
+ Those not interested in the coding can simply skip the coding examples
+ and won't miss anything.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I code in the R programming language and use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ for formatting results.
+ For those interested, the code for this article is found at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/karlp-asrs/pragmatics"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Institutional investors have adopted the use of private markets strategies
+ in their portfolios at a rapidly increasing rate in recent decades.
+ The markets themselves have grown commensurately to multi-trillion size.
+ As the number of listed companies is actually declining, private markets
+ have become difficult to ignore.
+ This paper does not, however, attempt to justify the decision to invest
+ in these markets or develop an approach to incorporating them in a strategic
+ asset allocation analytical framework.
+ It starts, instead, from a standpoint that those decisions have already
+ been made.
+ 
+\end_layout
+
+\begin_layout Standard
+When I need to explain the underwriting process for private markets investing,
+ I use the metaphor of a three legged stool.
+ One leg each for strategy, organization and track record.
+ By strategy, I refer to business strategy.
+ What market are you addressing; what is your competitive advantage and
+ how do you think you will add value? As a critical step in the process,
+ we assess the health of the asset management organization.
+ Do they have the organizational depth and skills to implement the target
+ strategy? Have the created a culture that will allow them to continue to
+ grow and improve over the life of the investment? We examine track record
+ as confirmatory evidence on the first two questions.
+ Track record alone is a weak indicator of likely future success.
+ Finally, we consider the terms of an investment partnership as to the appropria
+teness of the costs associated with it and the reliability of the alignment
+ of interest of the investor and investment manager.
+ What follows is a more detailed discussion of these topics.
 \end_layout
 
 \begin_layout Section
@@ -301,16 +346,22 @@ quality of rocks
 Real estate and credit are special cases.
  Real estate delivers value to consumers through design.
  Real estate design is the province of architects and urban designers who
- study consumer preference and grasp how to merge a building with its commercial
- purpose as a well as environmental and social context.
- Time and time again, we see well designed buildings maintaining high occupancy
- and earning premium rents in markets that otherwise would be regarded as
- highly competitive.
+ study consumer preference and grasp how to craft a strategy for building
+ design responsive to location and environmental context that creates a
+ strategic advantage in fulfilling its commercial purpose.
+ Time and time again, we see well designed and operated buildings maintaining
+ high occupancy and earning premium rents in markets and neighborhoods that
+ otherwise would be regarded as highly competitive.
  Employment trends, the tastes of millenials and impacts of technology are
  rapidly changing what constitutes good design and risks of obsolescence
  in real estate are high.
  Value strategies of investing in older buildings at discount prices need
  to be evaluated carefully.
+ Unlike other investment categories where scale is usually paramount, the
+ beauty and challenge of real estate is the intensely local nature of markets
+ creating the opportunity for competitive advantage and pricing power with
+ a relatively small business.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -326,7 +377,7 @@ Unlike equity strategies where value is created after the acquisition, credit
 \end_layout
 
 \begin_layout Standard
-The final test of strategy is cusomer-centeredness.
+The final test of strategy is consumer-centeredness.
  We started out by saying understanding strategy is similar to a firm grasp
  of the answer to how a firm earns its profits.
  If it's lucky or exploitive, it won't be sustainable.
@@ -364,6 +415,19 @@ off market
 \end_layout
 
 \begin_layout Standard
+Additionally, these relationships create access to deal flow.
+ A firm must demonstrate an ability to actually deploy capital, timely,
+ in the amount raised and consistent with the parameters of the promised
+ strategy.
+ I am not put off by a firm's aspiration to grow and, realistically, that
+ is a goal for any firm of quality.
+ However, an asset should be prepared to demonstrate that their is scalable
+ within the bounds of their fund raising aspirations, without drift or deteriora
+tion in underwriting standards.
+ 
+\end_layout
+
+\begin_layout Standard
 Every firm has a critical internal customer set in the people who work there.
  This is the topic of the next section.
 \end_layout
@@ -373,8 +437,11 @@ Organization
 \end_layout
 
 \begin_layout Standard
-Private markets investing is best thought of as a hiring decision.
- It isn't securities analysis.
+Once you select strategies to pursue, you need to hire teams to implement
+ them.
+ Private markets investing concerns itself principally with this hiring
+ decision.
+ Though we analyze prior investments, it isn't the same as securities analysis.
  When Warren Buffet drinks a Coca Cola and reads their financial statements
  and decides he likes it, he then can buy the stock and Coca Cola is what
  he gets.
@@ -395,10 +462,10 @@ You will start evaluating an organization simply by looking at the size
  From that information, you can calculate an estimate of the recurring revenue
  per employee.
  For firms with lower AUM per employee, less than $100 million, the business
- viability may not be sustainable with inadequate resources to support the
+ viability may not be sustainable with adequate personnel to support the
  strategy.
  For firms with high AUM per employee, one would ask whether the firm is
- investing enough in itself and whether ther may be too much outsourcing.
+ investing enough in itself and whether there may be too much outsourcing.
  The purpose of base asset management fees should be to support an organization
  well-resourced to implement the investment strategy.
  
@@ -407,7 +474,7 @@ You will start evaluating an organization simply by looking at the size
 \begin_layout Standard
 Firm culture is the other main topic for examination.
  Founder leadership style establishes and guides the culture.
- In building a firm founders make a series of increasing selfless decisions.
+ In building a firm founders make a series of increasingly selfless decisions.
  The first decision is to found the firm in the first place.
  The founders have a fire in their belly to pursue something reflecting
  their unique take on strategy and build something which is their own.
@@ -430,14 +497,14 @@ ing from deal culture to firm culture.
 \begin_layout Standard
 One of the fun things about being an investor in private markets is the
  opportunity to meet many founders and observe how they manage this journey.
- The best managers deemphasize the culture of the founder in order to build
- the culture of the firm.
+ The best managers deemphasize the personalities of the founders in order
+ to build the culture of the firm.
  Leaders in this style see leadership as service and to a significant degree
  an antonym to authority.
  They build a culture reflecting a philosophy and discipline of business
  practice and then trust the culture.
- Decisions and responsibility for them are entrusted to the team as their
- skills and experience grow.
+ Decisions and responsibility are increasingly entrusted to the team as
+ their skills and experience grow.
  The founders don't hold themselves out as final decision makers.
  Instead they monitor that appropriate discipline was observed in making
  the decision and that feedback loops are present to appropriately measure
@@ -460,9 +527,8 @@ Compensation and employment terms are important.
  a rich employment experience full of challenge, team comraderie and joy
  from shared experience of success, this only goes so and the firm will
  deteriorate if the riches created are not properly shared.
- Persons in authority who accept rewards from themselves without first taking
- care of their teams are failing as leaders and creating an intrinsically
- toxic environment.
+ Persons in authority who accept rewards for themselves without first taking
+ care of their teams are creating an intrinsically toxic environment.
  As the firm evolves, if will develop formalized and for more senior personnel
  contractual arrangements for sharing profit.
  Careers are emphasized and career conversations about what this job means
@@ -477,14 +543,14 @@ Compensation and employment terms are important.
 \end_layout
 
 \begin_layout Standard
-Assessing these things is difficult but important.
+Assessing these things is difficult for an investor, but important.
  Typical investment arrangements with these firms involve fund lives of
  ten to fifteen years.
- One sees firms that disintegrate in that time frame and contractual protections
- rarely provide adequate remedies.
- I use a thought experiment to help myself with this decision – I have adult
- children and I ask myself if this firm is a place I would want them to
- work.
+ One sees firms that ossify or disintegrate in that time frame and contractual
+ protections rarely provide adequate remedies.
+ In my own case, I use a thought experiment to help myself with this decision
+ – I have adult children and I ask myself if this firm is a place I would
+ want them to work.
  Will they be continuously challenged with projects and duties of increasing
  complexity as their skills grow.
  Will they receive regular candid feedback and will they receive financial
@@ -557,20 +623,12 @@ source('pme functions.r')
 
 \end_layout
 
-\begin_layout Subsection
-A demonstration of various methods
-\end_layout
-
 \begin_layout Standard
-In this post I will discuss traditional private equity performance measurements
- of IRR, TVPI and DPI and compare them to public market equivalent ("PME")
- methods.
- I provide code in R and an example data set to illustrate these calculations.
- 
+
 \end_layout
 
 \begin_layout Subsection
-Traditional methods
+Traditional Methods of Performance Measurement
 \end_layout
 
 \begin_layout Standard
@@ -581,7 +639,7 @@ Comparing private equity performance to public markets presents technical
  assets to own and in what weight.
  For example, you can use time weighted returns to properly compare the
  performance of large cap stocks with small cap stocks over whatever time
- frame or frames are of interest to you.
+ frame is of interest to you.
 \end_layout
 
 \begin_layout Standard
@@ -594,12 +652,8 @@ Private equity doesn't work the same way.
  no control over the timing of calls or distributions for the investment.
  In this context, time weighted return calculations are not useful in understand
 ing the performance of a private equity investment because the variability
- in the amount of capital deployed in a particular will typically be very
- large.
- Some private equity sponsors and investors compare their IRR returns with
- time weighted market returns, but this practice makes no sense because
- of the cash flow patterns and varying amount of capital deployed.
- raditional private equity performance measurements 
+ in the amount of capital deployed will typically be very large.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -616,7 +670,6 @@ s made.
  interest rate, calculated on the cash flows with the capital calls expressed
  as negative numbers and including the final cash flow as part of the time
  series for the calculation.
- The first two calculations are straightforward.
  
 \end_layout
 
@@ -644,15 +697,10 @@ Controlling for market context by vintage is useful but still crude because
  A number of authors proposed methods for this, but Steve Kaplan and Antoinette
  Schoar wrote an influential article exploring private equity performance
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{citep(bib[grep('Schoar',bib)])}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kaplan2005"
+literal "false"
 
 \end_inset
 
@@ -818,13 +866,10 @@ KSPME has some nice mathematical properties that allow it to be related
  relationship and proposes an additional metric, called "Direct Alpha",
  which is a measure expressed as an annual percent of outperformance of
  a private equity investment compared to a public market benchmark 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-`r citep(bib[1])`
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gredil2014"
+literal "false"
 
 \end_inset
 
@@ -915,10 +960,21 @@ Illustration of calculations of private equity performance measurements
 \end_layout
 
 \begin_layout Standard
-We work from a hypothetical data set of private equity cash flows and valuations
- with dates for each entry, an identifier for the fund of each entry and
- a variable "type" valued as "C" for cash flows and "V" for values.
- This data set has entries for four funds.
+For those interested, we provide here detatiled mechanics for calculating
+ PME.
+ The code and data are found on the earlier referenced Github site.
+ We work from a hypothetical data set of private equity cash flows and valuation
+s with dates for each entry.
+ Although this is a limited data set covering only four investments, the
+ exact same code will work on a large data set with thousands of entries
+ for hundreds of investments.
+ That's the beauty of coding – the algorithm doesn't grow in size simply
+ because the data set has.
+ 
+\end_layout
+
+\begin_layout Standard
+First, we read in the data and show its initial form.
 \end_layout
 
 \begin_layout Standard
@@ -971,12 +1027,16 @@ head(pedata)
 \end_layout
 
 \begin_layout Standard
-We now want to calculate a combined cash flow and valuation for the portfolio
- of four funds by summing the cash flows which occur on the same day.
- We add this to the data set using the name 'Total' as though it were an
- additional fund of that name.
- Note we separate the values from the cash flows in case there is a cash
- flow on the same data as a valuation.
+We now calculate a combined cash flow and valuation for the portfolio and
+ an additional investment labeled 
+\begin_inset Quotes eld
+\end_inset
+
+Total
+\begin_inset Quotes erd
+\end_inset
+
+.
  
 \end_layout
 
@@ -1039,13 +1099,9 @@ tail(pedata)
 \end_layout
 
 \begin_layout Standard
-Now we download the Russell 2000 index from Yahoo finance.
- We fill in missing days from the last market day in the second line of
- code.
- Values on weekends and holidays and holidays are needed because of the
- accounting convetion to quote fund values on the last day of a calendar
- quarter.
- 
+Next we download the Russell 2000 index from Yahoo finance.
+ R can handle other data services, but we use Yahoo because it's available
+ to anybody at no charge.
 \end_layout
 
 \begin_layout Standard
@@ -1093,49 +1149,7 @@ r2k=na.locf(merge(r2k,
 \end_layout
 
 \begin_layout Standard
-The variable 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{r2k}
-\end_layout
-
-\end_inset
-
- is returned from 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{get.hist.quote}
-\end_layout
-
-\end_inset
-
- as a 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{zoo}
-\end_layout
-
-\end_inset
-
- object.
- We convert it to a data frame with a variable name for the date value that
- matches the date value variable name in the private equity data set.
- We can then 
+We now 
 \begin_inset ERT
 status open
 
@@ -1148,8 +1162,8 @@ texttt{merge}
 
 \end_inset
 
- it with the private equity data set so that each entry in the data set
- has its related market index value.
+ the index data with the private equity data set so that each entry in the
+ data set has its related market index value.
  
 \end_layout
 
@@ -1265,11 +1279,8 @@ texttt{pelist}
 .
  The code for all the functions used in this post are listed at the end
  of the post.
-\end_layout
-
-\begin_layout Standard
-You can calculate the performance statistics and present them in a table
- as follows 
+ Having done the hard work of preparing the data for analysis, we can now
+ calculate the performance statistics with only two lines of code.
 \end_layout
 
 \begin_layout Standard
@@ -1307,13 +1318,8 @@ round(stats.df,3)
 \end_layout
 
 \begin_layout Standard
-Here is an example of a way to plot the results.
- The x axis is the market return, as if invested in Russell 2000.
- The y axis is the fund return.
- A line is provided with slope of 1 and intercept through the origin.
- Funds above this line have outperformed their public market benchmark.
- The fund names are printed in a color code indicating the value of KSPME
- for the fund.
+Here is an example of a way to graphically present the results.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1378,7 +1384,54 @@ ggplot(stats.df2,aes(x=ind.irr,y=irr,label=name,colour=kspme))+
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+PME methods are not a magic bullet, but they are very useful.
+ Prior to these methods, it was difficult to benchmark performance.
+ PME methods provide a rigorous tool for assessing performance relative
+ to market which is an essential starting point for assessing the quality
+ of a firm and its strategies.
+\end_layout
+
+\begin_layout Subsection
+Consideration of skewness
+\end_layout
+
+\begin_layout Standard
+One last topic on performance assessment deserves mention.
+ As is well known, stock market returns are skewed with a few outliers contribut
+ing disproportionately to performance.
+ Hank Bessembinder has shown that only 4% of stocks have contributed substantial
+ly all the outperformance of the stock market since the great depression.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bessembinder2019"
+literal "false"
+
+\end_inset
+
+We'd like to see a similar positive outlier type of skewness in our private
+ markets investments.
+ The data sets are too small in private markets for any pretension of fancy
+ statistics.
+ I prefer something I call a 
+\begin_inset Quotes eld
+\end_inset
+
+slugging percentage
+\begin_inset Quotes erd
+\end_inset
+
+ which is simply the percentage of deals that have returned 3X or more of
+ the initial investment.
+ We then compare that to the percentage of deals that have lost money and
+ if it's comfortably larger, we have evidence of the sort of skewness we
+ are looking for.
+ In the next section, we will analyze the effect of incentive compensation
+ on the skewness of net returns and you will see that positively gross returns
+ are needed to balance things out for the investor.
 \end_layout
 
 \begin_layout LyX-Code
@@ -1390,13 +1443,14 @@ Understanding and Analyzing Cost
 \end_layout
 
 \begin_layout Standard
-This is a quick and dirty analyzer of general partner compensation in real
- estate and private equity partnerships.
+Private equity structures are complicated and difficult to analyze.
+ We present here a quick and dirty analyzer of general partner compensation
+ in real estate and private equity partnerships.
  It analyzes the outcomes across a range of performance scenarios in single
  period investment context.
  It is useful for analyzing the sharing of income between the GP and investors
  as income varies.
- Files for this post are found at https://github.com/karlpolen/waterfallqd
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1452,8 +1506,11 @@ The incentive fee ("carry") is typically stated as a percent of profits.
  Above an 8% return, the sponsor gets half the profit (i.e.
  the catchup is 50%) until the ratio of profit split is 20% to sponsor.
  Thereafter, the profits are split 80% to the investors and 20% to the sponsor.
- Although the catchup is negotiable, usually from 50% to 100%, this is the
- nearly universal structure of private equity sponsor compensation.
+ Incentive fees of 20% over an 8% hurdle are nearly universal in private
+ equity.
+ Although the catchup is negotiable, somewhere in the 50% to 100% range
+ is typical.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1466,8 +1523,8 @@ Real estate deals have greater variation.
  earned a 12% return and 50% of profits once the investor has earned a 20%
  return.
  There is no catchup in this structure, but between the 8% and 12% hurdle
- sponsor carry starts to drag on return and the gross return needs to be
- higher than 12% before the the next level of carry kicks in.
+ sponsor carry starts to drag on return and the net return to the investor
+ needs to be higher than 12% before the the next level of carry kicks in.
 \end_layout
 
 \begin_layout Subsection
@@ -1479,7 +1536,8 @@ Let's revisit the typical private equity structure ("20 over 8 with a 50%
  catchup").
  We will add a 2% asset management fee and consider the sharing of cash
  in the context of an investment with a hold period of exactly one year.
- 
+ We will now step through, in agonizing detail, each of the calculations
+ for profit sharing.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1529,10 +1587,6 @@ pref=capital*.08
 Invest $100 in an asset.
  In addition, the investor has to pay the asset management fee of $2.
  So, they have invested $102
-\end_layout
-
-\begin_layout Standard
-We now illustrate the distribution of cash with a sale of the investment
 \end_layout
 
 \begin_layout Subsubsection
@@ -1978,6 +2032,25 @@ Sexpr{lproi}
 \end_layout
 
 \begin_layout Standard
+At the github site we've provided a function called 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{waterfall}
+\end_layout
+
+\end_inset
+
+ that automates these calculations.
+ We illustrate its use for the private equity structure we have just stepped
+ through.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2055,8 +2128,12 @@ status open
 
 \begin_layout Plain Layout
 
-plot(ans.pe$grossreturn,ans.pe$grossreturn,type='l',col='red',xlab='Gross
- Return',ylab='Return')
+plot(ans.pe$grossreturn,ans.pe$grossreturn,type='l',
+\end_layout
+
+\begin_layout Plain Layout
+
+	col='red',xlab='Gross Return',ylab='Return')
 \end_layout
 
 \begin_layout Plain Layout
@@ -2070,8 +2147,12 @@ lines(ans.pe$grossreturn,ans.pe$netreturn,type='l',col='blue')
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
-) 
+legend('topleft',legend=c('Gross Return','Net Return'),
+\end_layout
+
+\begin_layout Plain Layout
+
+	col=c('red','blue'),lwd=1) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2109,13 +2190,27 @@ deltagp=diff(ans.pe$grossreturn-ans.pe$netreturn)
 
 \begin_layout Plain Layout
 
-gpcut=100*deltagp/deltaprofit 
+gpcut=100*(deltagp/deltaprofit-.02) 
 \end_layout
 
 \begin_layout Plain Layout
 
-plot(ans.pe$grossreturn[-1],gpcut, main=('Marginal Share of Return to Sponsor'),
- xlab='Gross Return', ylab='Percent',type='l',col='blue')
+plot(ans.pe$grossreturn[-1],gpcut, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	main=('Marginal Share of Return to Sponsor'), 
+\end_layout
+
+\begin_layout Plain Layout
+
+	xlab='Gross Return', ylab='Percent',
+\end_layout
+
+\begin_layout Plain Layout
+
+	type='l',col='blue')
 \end_layout
 
 \begin_layout Plain Layout
@@ -2135,8 +2230,23 @@ As you can see, the share to the GP increases to 50% during the catchup
  of the cumulative profits.
 \end_layout
 
+\begin_layout Subsection
+Real Estate Structure Example
+\end_layout
+
 \begin_layout Standard
-Let's do the same for the real estate example.
+Let's do the same for the real estate example where the incentive fee is
+ 
+\begin_inset Quotes eld
+\end_inset
+
+20 over 8, thirty over 12 and 50 over 20
+\begin_inset Quotes erd
+\end_inset
+
+.
+ In this case, we illustrate where there is a 2% asset management fee but
+ half the fee is deferred until the investor has achieved an 8% return.
 \end_layout
 
 \begin_layout Standard
@@ -2160,8 +2270,12 @@ recap=101
 
 \begin_layout Plain Layout
 
-dmat.re=data.frame(am=c(0,1,0),pref=c(.08,.12,.20)*recap,catchup=c(0,0,0),carry=c(.2,.3
-,.5))
+dmat.re=data.frame(am=c(0,1,0),pref=c(.08,.12,.20)*recap,
+\end_layout
+
+\begin_layout Plain Layout
+
+	catchup=c(0,0,0),carry=c(.2,.3,.5))
 \end_layout
 
 \begin_layout Plain Layout
@@ -2213,8 +2327,12 @@ lines(ans.re$grossreturn,ans.re$netreturn,type='l',col='blue')
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
-) 
+legend('topleft',legend=c('Gross Return','Net Return'),
+\end_layout
+
+\begin_layout Plain Layout
+
+	col=c('red','blue'),lwd=1) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2257,8 +2375,22 @@ gpcut=100*deltagp/deltaprofit
 
 \begin_layout Plain Layout
 
-plot(ans.re$grossreturn[-1],gpcut, main=('Marginal Share of Return to Sponsor'),
- xlab='Gross Return', ylab='Percent',type='l',col='blue')
+plot(ans.re$grossreturn[-1],gpcut, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	main=('Marginal Share of Return to Sponsor'), 
+\end_layout
+
+\begin_layout Plain Layout
+
+	xlab='Gross Return', ylab='Percent',
+\end_layout
+
+\begin_layout Plain Layout
+
+	type='l',col='blue')
 \end_layout
 
 \begin_layout Plain Layout
@@ -2277,17 +2409,22 @@ As you can see, the GP share spikes when they recover their share of the
  shares of profit above the hurdle rates delivered to the investor.
 \end_layout
 
+\begin_layout Standard
+These calculations are tricky and a source of endless frustration for analysts
+ entering the profession.
+ For those willing to suffer learning a bit of coding, functions like the
+ one provided can help.
+\end_layout
+
 \begin_layout Subsection
 Consideration of skewness
 \end_layout
 
 \begin_layout Standard
-As a refresher, the following code uses a function `waterfall` discussed
- in the earlier post to calculate gross and net returns for a partnership
- with a 1.5% management and incentive of 20% over an 8% preferred return
- with an 80% catchup.
- We plot the comparative returns and the fee paid to the sponsor as a function
- of gross return.
+We will now use the waterfall function to analyze the skewness of net returns
+ in a private equity structure a 1.5% management fee and incentive of 20%
+ over an 8% preferred return with an 80% catchup.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2316,27 +2453,6 @@ wat=waterfall(dmat.df,ret)
 
 \begin_layout Plain Layout
 
-plot(wat$grossreturn,wat$grossreturn,col='red',type='l',main='Gross and
- Net Returns', ylab='Return',xlab='Gross Return')
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-lines(wat$grossreturn,wat$netreturn,col='blue') 
-\end_layout
-
-\begin_layout Plain Layout
-
-legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
-)
-\end_layout
-
-\begin_layout Plain Layout
-
 @
 \end_layout
 
@@ -2351,23 +2467,10 @@ Calculating net returns given a probability distribution assumption for
 \end_layout
 
 \begin_layout Standard
-We can also use the waterfall function to calculate net returns assuming
- a probability distribution of gross returns.
- Suppose we think gross returns are normally distributed, with a mean of
+Suppose we think gross returns are normally distributed, with a mean of
  15% and standard deviation of 15%.
- How are the net returns distributed?
-\end_layout
-
-\begin_layout Standard
-In order to do this, we are going to create a set of gross returns that
- are distributed according to the above assumption.
- The R language has native capability for this and we simply use the `dnorm`
- function to build the distribution.
- We consider cases plus or minus 3 standard deviations from the mean.
- Note the use of `rep` to replicate more likely values to give them appropriate
- weight in the distribution.
- Then you calculate the returns using the waterfall function.
- 
+ How are the net returns distributed? The below code makes these calculations
+ and presents a comparative density function.
 \end_layout
 
 \begin_layout Standard
@@ -2416,8 +2519,12 @@ wat2=waterfall(dmat.df,ret2)
 
 \begin_layout Plain Layout
 
-with(wat2,plot(density(netreturn),col='blue',main='Return Density',xlab='Gross
- Return')) 
+with(wat2,plot(density(netreturn),col='blue',
+\end_layout
+
+\begin_layout Plain Layout
+
+	main='Return Density',xlab='Gross Return')) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2427,8 +2534,12 @@ with(wat2,lines(density(grossreturn),col='red'))
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
-)
+legend('topleft',legend=c('Gross Return','Net Return'),
+\end_layout
+
+\begin_layout Plain Layout
+
+	col=c('red','blue'),lwd=1)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2439,11 +2550,6 @@ legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=1
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Here we plot a cumulative density function.
- Note the use of `ecdf` to calculate an empirical density on the net returns.
 \end_layout
 
 \begin_layout Standard
@@ -2452,24 +2558,24 @@ status open
 
 \begin_layout Plain Layout
 
-<<skew3>>=
+<<skew3, echo=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-with(wat2,plot(ecdf(netreturn),col='blue',pch=20, main='Cumulative Density',xlab
-='Gross Return')) 
+#with(wat2,plot(ecdf(netreturn),col='blue',pch=20, main='Cumulative Density',xla
+b='Gross Return')) 
 \end_layout
 
 \begin_layout Plain Layout
 
-lines(ret.seq,pnorm(ret.seq,mu,sd),col='red',lwd=3) 
+#lines(ret.seq,pnorm(ret.seq,mu,sd),col='red',lwd=3) 
 \end_layout
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=3
-)
+#legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=
+3)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2483,12 +2589,15 @@ legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=3
 \end_layout
 
 \begin_layout Standard
-Next we calculate the distribution of fees, i.e.
- the difference between gross and net returns.
- Note the use of `from` in the `density` function to cut off values below
- the minimum fee, which is the asset management fee.
- Contractually, the fees are never lower than that.
- I've added a vertical dotted line at the mean fee.
+As you can see, the net returns are skewed to the low return side if you
+ assume normally distributed gross returns.
+ This is why we are looking for managers with a track record for positive
+ skewness in their gross returns.
+\end_layout
+
+\begin_layout Standard
+Next we show the distribution of fees with a vertical dotted line at the
+ mean fee.
 \end_layout
 
 \begin_layout Standard
@@ -2512,9 +2621,12 @@ mean.fee=mean(fee)
 
 \begin_layout Plain Layout
 
-plot(density(fee,from=min(fee)),col='purple',lwd=2, main='Fee Drag Distribution
-\backslash
-nGross Return minus Net Return', xlim=c(1,14))
+plot(density(fee,from=min(fee)),col='purple',lwd=2, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	main='Fee Distribution', xlim=c(1,14))
 \end_layout
 
 \begin_layout Plain Layout
@@ -2533,16 +2645,31 @@ abline(v=mean.fee,lty='dotted',col='purple')
 
 \end_inset
 
- 
-\end_layout
 
-\begin_layout Subsection
-Cost Effectiveness
 \end_layout
 
 \begin_layout Standard
-We will analyze fee effictiveness in a typical PE structure using tools
- in the asrsMethods library.
+It you want an estimate of what your fees are likely to be, this is a way
+ to calculate it.
+\end_layout
+
+\begin_layout Subsection
+Fee Effectiveness
+\end_layout
+
+\begin_layout Standard
+As part of evaluating an investment program, you will inevitably be asked
+ 
+\begin_inset Quotes eld
+\end_inset
+
+did you receive value for the fees you paid?
+\begin_inset Quotes erd
+\end_inset
+
+ I think the best way to look at this is by considering fees as a percent
+ of excess profits.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2551,12 +2678,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<ce1,message=FALSE, warning=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-#library(asrsMethods,quietly=TRUE, verbose=FALSE) 
+<<ce1,message=FALSE, warning=FALSE, echo=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2577,6 +2699,7 @@ library(ggplot2,quietly=TRUE,verbose=FALSE)
 \begin_layout Standard
 Let's setup a PE investment with market standard terms of 1.5% asset management
  fee, 20% carry over an 8% hurdle with an 80% catchup.
+ First we show a plot the fee as a function of gross return.
 \end_layout
 
 \begin_layout Standard
@@ -2600,8 +2723,12 @@ ans.pe=waterfall(dmat.pe,ret=seq(100,130,.1))
 
 \begin_layout Plain Layout
 
-df=data.frame(Gross_Return=ans.pe$grossreturn,Net_Return=ans.pe$netreturn)
- 
+df=data.frame(Gross_Return=ans.pe$grossreturn,
+\end_layout
+
+\begin_layout Plain Layout
+
+	Net_Return=ans.pe$netreturn) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2611,7 +2738,7 @@ df$Fee=df$Gross_Return-df$Net_Return
 
 \begin_layout Plain Layout
 
-bench=6
+bench=6 #asuumed near term public market returns
 \end_layout
 
 \begin_layout Plain Layout
@@ -2645,6 +2772,10 @@ ggplot(df,aes(x=Gross_Return,y=Fee))+geom_line()
 \end_layout
 
 \begin_layout Standard
+Now we show a plot of the fee as a percent of the excess return.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2673,26 +2804,27 @@ Negotiating terms to manage cost
 \end_layout
 
 \begin_layout Standard
-The primary cost drivers in this type of investment are what we have already
- discussed.
- In an effort, to negotiate and reduce cost here are some suggestions on
- where to direct your focus.
+The primary fee cost drivers in private equity type investment are the asset
+ management and incentive fees.
+ If you are trying to negotiate and reduce cost, here are some suggestions
+ on where to direct your focus.
 \end_layout
 
 \begin_layout Standard
 Pay close attention to the catch-up provisions.
  Assuming your incentive fee is 20 over 8 and a reasonably successful investment
- program, the catchup will add 1.6% per year to the investment cost.
+ program, the catchup will add 1.6% per year to the investment cost; i.e.
+ the 20% incentive rate times the 8% hurdle.
  While this would be considered market standard in many contexts, it may
  at times be negotiable.
  The catchup has the biggest impact in the return band of 9% to 12% gross
  returns, where the catchup is paid.
  If this is an interemediate return strategy (as much real estate and credit
- strategies will be) you need to consider whether this is acceptable to
- you.
+ strategies will be) where the expected returns are within that band, you
+ need to consider whether this is acceptable to you.
  Negotiated solutions might be elimination of the catchup, possibly in considera
 tion for a lower hurdle or the addition of higher incentive structures for
- exceptional as in the real estate structure described above.
+ exceptional performance as in the real estate structure described above.
 \end_layout
 
 \begin_layout Standard
@@ -2767,17 +2899,261 @@ By sharing profits with an asset manager, you achieve alignment of interest
 \end_layout
 
 \begin_layout Standard
-A final area to monitor is the incentive payment as either deal-by-deal
- as profits on individual transactions are realized or on a total fund basis
- paid only after all the investor's capital has been returned.
- If incentive fees are paid deal-by-deal, it is common for their true-up
- and clawback at the end of the fund if final deals are unprofitable and
- more fees were paid on individual than were earned on an overall basis.
- The clawback is typicaly paid on an after tax basis.
+The situation is exacerbated when incentive fees are paid on a deal by deal
+ basis.
+ In that case if the manager has sold profitable deals early in the partnership
+ and collected incentive fees for them they may owe the partnership money
+ for a 
+\begin_inset Quotes eld
+\end_inset
+
+clawback
+\begin_inset Quotes erd
+\end_inset
+
+ on liquidation of the partnership to the extent fees initially advanced
+ for early deals are higher than ultimately earned.
+ This provides a powerful additional incentive to delay final liquidation.
+\end_layout
+
+\begin_layout Standard
+For an investor in a program constructed of traditional closed end fund
+ partnership interests there is little defense against these problems other
+ than a well diversified portfolio with multiple managers, strategies and
+ vintages.
+ In that structure any problems will be mitigated and you can gradually
+ weed out any managers who handle tough situations more to their own advantage.
+\end_layout
+
+\begin_layout Standard
+However, if you are a larger investor you may be able to structure investments
+ as large 
+\begin_inset Quotes eld
+\end_inset
+
+separate accounts
+\begin_inset Quotes erd
+\end_inset
+
+ on custom terms.
+ In those structures, you may be able to negotiate provisions in favor of
+ the investor for discretionary termination of investment periods, custom
+ mandatory investment criteria and ability to direct liquidation of all
+ or part of the assets.
+ This approach is much more management intensive and requires specialized
+ expertise to implement, but can add significant value in reduced cost and
+ reliably aligned interests.
+\end_layout
+
+\begin_layout Subsection
+Information rights
+\end_layout
+
+\begin_layout Standard
+An area of ongoing frustration for me has been the quality and timeliness
+ of information delivered to the investors.
+ While some sponsors do an excellent job, there are more who fall short.
+ With advances in technology, accounting systems have rapidly moved toward
+ real time dashboard type environments.
+ Private equity shouldn't be any different.
+ Investors should have access to real financial statements for each of the
+ portfolio investments, prepared in accordance with GAAP consistently applied
+ and delivered promptly.
+ Additionally, there should be management discussion including a set of
+ key performance indicators relevant to the deal and compared to initial
+ underwriting expectations.
+ With this information, an investor could know if an investment is going
+ well.
+\end_layout
+
+\begin_layout Standard
+What is actually delivered to investors is far too often partial information,
+ not consistently presented from quarter to quarter and heavily spun by
+ the firm's marketing department.
+ Investors shouldn't put up with this, but for some reason they do and I
+ have found it difficult to get traction with commingled fund managers on
+ this topic.
+ It's puzzling to me that asset managers do not find it relevant to strive
+ for excellence in this area in order to add value to their investors.
+ In a separate account arrangement, this can be addressed and the manager
+ will not incur any additional cost because of it.
+ If the manager is competent enough to earn your investment, they already
+ have this information and just need to share it with you.
 \end_layout
 
 \begin_layout Section
-Summary and Conclusion
+The Upshot
+\end_layout
+
+\begin_layout Standard
+When I started to write this paper, I thought it was going to be about the
+ quantitative methods.
+ I've written code which I believe could be a minor, but useful addition
+ to the field.
+ It quickly dawned on me that this would create the wrong impression, as
+ though implementing these quantitative tricks would lead to a successful
+ investment program.
+ 
+\end_layout
+
+\begin_layout Standard
+The most important determinant of investment success are strategy selection
+ and investment manager hiring decisions.
+ My view is that private markets investing is business investing.
+ Business strategy analysis boils down to deciding which markets do you
+ want to address and what approach will you implement in an effort to add
+ value.
+ Growth and value strategies can both be productive.
+ It may be easier to generate excess profits in growing markets because
+ they are more forgiving – market growth can be bail you out even with operation
+al missteps.
+ Value strategies when well implemented have the advantage of high margins
+ and operating cash flow in run off situations but are less forgiving in
+ implementation.
+ My experience suggests strategies with differentiated products and potential
+ for pricing power are more likely to produce excess returns.
+ 
+\end_layout
+
+\begin_layout Standard
+Manager hiring decisions are key to successfully implementing the strategy
+ you have selected.
+ You need to assess the fit of the organization to the strategy – the organizati
+on needs depth and expertise in the industries, products and managerial
+ disciplines needed by the strategy.
+ The organization needs to be healthy with a strong and motivated team.
+ The PME methods discussed here provide a rigorous way to assess whether
+ a manager has in fact added value.
+ But that measurement is only useful in support of your assessment that
+ an organization is well suited to implement a strategy you have chosen
+ to pursue.
+ If you flip the order and conclude something like 
+\begin_inset Quotes eld
+\end_inset
+
+the PME was good, the strategy and the firm must be good
+\begin_inset Quotes erd
+\end_inset
+
+, you are (in my opinion) making a mistake.
+\end_layout
+
+\begin_layout Standard
+Negotiation of terms matters.
+ I think the best way to think about cost is as a percent of excess return
+ and we have presented methods for analyzing and understanding cost.
+ Minimization of cost is not the goal.
+ Indeed, if you are successful in selecting strategies and management teams
+ your absolute cost will be higher because you will pay more in incentive
+ fees.
+ You need to negotiate fees keeping in mind the big picture – you want to
+ encourage and support your partners to build and maintain high quality
+ teams and the fees paid need to be consistent with that.
+ The mix and timing of fees paid needs to be logical for the firm you have
+ chosen as your partner.
+ But when the dust settles, you want the fees to bear a reasonable relationship
+ to excess returns earned.
+ As the investor you are taking essentially all of the risk and need to
+ retain a fair share of the reward.
+\end_layout
+
+\begin_layout Standard
+How has this worked at for ASRS? I've consciously said very little about
+ my employer.
+ But I've worked at ASRS for ten years mostly as Head of Private Markets
+ Investing and the last four years as CIO.
+ We have built a private markets program consisting of real estate, private
+ equity and credit that now amounts to about 40% of our fund and is targeted
+ to be about 50% of the fund in coming years.
+ Over that ten year period, the private markets program have exceeded their
+ benchmarks with annual excess returns for the ten year period of 1.7% for
+ private equity, 2.7% for real estate and 5.1% for credit.
+ In the most recent year ended June 30, 2019, the excess returns were 7.5%
+ for private equity, 3.7% for real estate and 2.3% for credit
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The benchmarks are ODCE for real estate, Russell 2000 for private equity
+ and the LSTA leveraged loan index + 250bp for credit.
+\end_layout
+
+\end_inset
+
+.
+ These excess returns have added over $2 billion of value to the ASRS trust
+ fund and contributed to the overall performance of ASRS which has placed
+ it consistenly among the top quartile of public pension plans.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Detailed information about ASRS investment performance is found in reports
+ to the board investment committee and posted on the ASRS website at 
+\begin_inset CommandInset href
+LatexCommand href
+target "azasrs.gov/content/board-and-committee-meetings"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I'd like to close with some thoughts about research and potential reform.
+ In the research area, the quantitative research and introduction of techniques
+ (notably PME) is useful.
+ But more organizational oriented research wwould help.
+ It seems like finance oriented papers need to be data and statistics oriented
+ and organizational factors aren't well suited to that type of analysis.
+ But I'm arguing organizational stuff is what matters.
+ Are there are characteristics of firms (such as growth, sharing of carry,
+ management of careers) that can be associated with higher likelihood of
+ success? Are their characteristics of investors (such as industry experience,
+ analytical methods and compensation approaches) that influence outcomes?
+ On the industry side, the near universality of 
+\begin_inset Quotes eld
+\end_inset
+
+20 over 8
+\begin_inset Quotes erd
+\end_inset
+
+ as an incentive structure should be questioned.
+ Fund sponsors rightly point out that the 8% hurdle may not be appropriate
+ in a 2% treasury world.
+ Incentive compensation linked to excess return relative to market indices
+ may be an improvement and use of PME methods in measuring excess performance
+ appropriate.
+ Reform is needed to improve alignment on underperforming funds.
+ The languishing of out-of-the-money funds is common and creates the appearance
+ they are being milked for fees.
+ Investors need remedies and structures to address this.
+ Finally, progress in the quality and timeliness of information delivered
+ to investors would be a great boon to them.
+\end_layout
+
+\begin_layout Standard
+Thank you for reading this article! I hope you found it useful.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "pme"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
