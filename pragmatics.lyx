@@ -88,6 +88,85 @@ The Pragmatics of Private Markets Investing
 Karl Polen
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Address
+Karl Polen is the CIO of the Arizona State Retirement System
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+karlp@azasrs.gov
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+3300 N.
+ Central, Phoenix, AZ 85016
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+(602) 240-2014
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pagebreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction and Background
 \end_layout
@@ -427,9 +506,9 @@ Additionally, these relationships create access to deal flow.
  strategy.
  I am not put off by a firm's aspiration to grow and, realistically, that
  is a goal for any firm of quality.
- However, an asset should be prepared to demonstrate that their is scalable
- within the bounds of their fund raising aspirations, without drift or deteriora
-tion in underwriting standards.
+ However, an asset manager should be prepared to demonstrate that their
+ strategy is scalable within the bounds of their fund raising aspirations,
+ without drift or deterioration in underwriting standards.
  
 \end_layout
 
@@ -451,8 +530,8 @@ Once you select strategies to pursue, you need to hire teams to implement
  When Warren Buffet drinks a Coca Cola and reads their financial statements
  and decides he likes it, he then can buy the stock and Coca Cola is what
  he gets.
- You can analyze the prior track of a private equity firm all you want,
- but you don't get those deals.
+ You can analyze the prior track record of a private equity firm all you
+ want, but you don't get those deals.
  What you are evaluating is whether they have created a culture and process
  that adds value and assessing whether you think it is likely they will
  repeat that success.
@@ -531,7 +610,7 @@ Compensation and employment terms are important.
  This is where the rubber hits the road.
  While it may be the case that employees will be loyal to firms that create
  a rich employment experience full of challenge, team comraderie and joy
- from shared experience of success, this only goes so and the firm will
+ from shared experience of success, this only goes so far and the firm will
  deteriorate if the riches created are not properly shared.
  Persons in authority who accept rewards for themselves without first taking
  care of their teams are creating an intrinsically toxic environment.
@@ -543,9 +622,14 @@ Compensation and employment terms are important.
  Succession planning and ownership of the asset management firm need to
  be addressed well in advance of need both to protect investors and to complete
  the bond with the next generation of managers who will succeed the founders.
- The capital of an asset management firm is human capital and founders who
- do not properly share rewards and do not plan for succession are dissipating
- that capital.
+ 
+\end_layout
+
+\begin_layout Standard
+The capital of an asset management firm is human capital.
+ Founders who make the short term sacrifice of building a high quality culture
+ that exists beyond them and will endure after them achieve more for themselves
+ and the markets they serve than those with a narrower view of self interest.
 \end_layout
 
 \begin_layout Standard
@@ -626,10 +710,6 @@ source('pme functions.r')
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
@@ -1445,7 +1525,7 @@ slugging percentage
 \end_layout
 
 \begin_layout Section
-Understanding and Analyzing Cost
+Cost and Partnership Terms
 \end_layout
 
 \begin_layout Standard
@@ -2951,6 +3031,43 @@ separate accounts
  reliably aligned interests.
 \end_layout
 
+\begin_layout Standard
+One cautionary remark on larger alternate investment structures is that
+ just being larger and just reducing fees isn't enough to produce better
+ results.
+ A number of larger investors have pursued 
+\begin_inset Quotes eld
+\end_inset
+
+co-invest sidecar
+\begin_inset Quotes erd
+\end_inset
+
+ structures where they get investment allocations side by side with a traditiona
+l investment fund at reduced or no fees.
+ The criteria for investment allocation vary, but generally larger deals
+ are allocated partly to the co-invest vehicles.
+ Josh Lerner and Antoinette Schoar analyzed a large database of investments
+ in these types of alternate vehicles and concluded that the alternate structure
+s underperformed the related fund investments for many investors.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schoar2018"
+literal "false"
+
+\end_inset
+
+ If you are going to pursue alternate structures and accept the risk of
+ increased concentration in a manager or strategy you need to negotiate
+ an appropriate partnership structure with adequate rights to ensure strategy
+ discipline and liquidity rights to end investment periods and/or liquidate
+ investments in the investor's discretion.
+ The rewards can be greater with strategic relationship when they are well
+ conceived and well managed, but the approach is not without risk and is
+ not advised for investors without the requisite experience to diligize
+ the strategy and properly structure the legal arrangement.
+\end_layout
+
 \begin_layout Subsection
 Information rights
 \end_layout
@@ -3087,6 +3204,11 @@ The benchmarks are ODCE for real estate, Russell 2000 for private equity
 \end_inset
 
 .
+ ASRS has made extensive use of large separate accounts and some direct
+ investments in implementing its real estate and credit program.
+ These alternate structures have outperformed commingled fund vehicles and
+ provide the additional benefit of much closer market engagement providing
+ opportunity for greater expertise and honing of skills.
  These excess returns have added over $2 billion of value to the ASRS trust
  fund and contributed to the overall performance of ASRS which has placed
  it consistenly among the top quartile of public pension plans.
