@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{wrapfig}
+\end_preamble
 \use_default_options true
 \begin_modules
 knitr
@@ -46,9 +49,11 @@ knitr
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblatex_bibstyle authoryear
+\biblatex_citestyle chicago-authordate
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -89,8 +94,7 @@ Karl Polen
 \end_layout
 
 \begin_layout Address
-Karl Polen is the Chief Investment Officer of the Arizona State Retirement
- System
+Karl Polen is Chief Investment Officer at Arizona State Retirement System
 \begin_inset ERT
 status open
 
@@ -105,7 +109,7 @@ status open
 
 \end_inset
 
-karlp@azasrs.gov or karl.polen@gmail.com
+karlp@azasrs.gov (for official communication with ASRS only) 
 \begin_inset ERT
 status open
 
@@ -120,23 +124,7 @@ status open
 
 \end_inset
 
-3300 N.
- Central, Phoenix, AZ 85016
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-(602) 240-2014
+karl.polen@gmail.com (for all other communication)
 \end_layout
 
 \begin_layout Standard
@@ -261,9 +249,9 @@ pagebreak
 \end_layout
 
 \begin_layout Standard
-In this paper I share views I have developed about investing in private
- markets during thirty years of private sector experience followed by ten
- years in an institutional environment.
+In this paper I share perspectives about investing in private markets developed
+ during thirty years of private sector experience followed by ten years
+ in an institutional environment.
 \begin_inset Foot
 status open
 
@@ -271,8 +259,7 @@ status open
 I have worked for the Arizona State Retirement System for the last ten years,
  initially as Head of Private Markets Investing and as CIO for the last
  4 years.
- While I work for ASRS as CIO, this work and the views it expresses are
- my own.
+ However, this work and the views it expresses are my own.
  The policies of ASRS are set in accordance with its governance policy and
  may be different from what is stated here.
  Any information about ASRS is drawn from public information readily available
@@ -314,18 +301,18 @@ When I need to explain the underwriting process for private markets investing,
  how do you think you will add value? As a critical step in the process,
  we assess the health of the asset management organization.
  Do they have the organizational depth and skills to implement the target
- strategy? Have the created a culture that will allow them to continue to
- grow and improve over the life of the investment? We examine track record
+ strategy? Have they created a culture that will allow them to continue
+ to grow and improve over the life of the investment? We examine track record
  as confirmatory evidence on the first two questions.
  Track record alone is a weak indicator of likely future success.
  Finally, we consider the terms of an investment partnership as to the appropria
 teness of the costs associated with it and the reliability of the alignment
  of interest of the investor and investment manager.
- What follows is a more detailed discussion of these topics.
+ 
 \end_layout
 
 \begin_layout Section*
-Strategy
+STRATEGY
 \end_layout
 
 \begin_layout Standard
@@ -348,7 +335,7 @@ strategy
 \end_layout
 
 \begin_layout Standard
-You can think of business strategy as an antonym to luck.
+You can think of business strategy as the opposite of luck.
  It answers the question 
 \begin_inset Quotes eld
 \end_inset
@@ -412,7 +399,7 @@ In this context, liquidity and savvyness about discerning value and opportunity
 \end_layout
 
 \begin_layout Standard
-Markets can broadly be categorized as 
+Private equity strategies can broadly be categorized as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -428,8 +415,8 @@ value
 \begin_inset Quotes erd
 \end_inset
 
- markets.
- In growth markets, your goal is to accelerate the top line while optimizing
+.
+ In growth approaches, your goal is to accelerate the top line while optimizing
  operations to drive down unit costs enhancing profitability or creating
  a path to it.
  In value strategies, you rationalize operations in order to harvest cash
@@ -466,12 +453,12 @@ quality of rocks
 \end_layout
 
 \begin_layout Standard
-Real estate and credit are special cases.
- Real estate delivers value to consumers through design.
- Real estate design is the province of architects and urban planners who
- study consumer preference and craft a strategy for building design responsive
- to location and environmental context that creates a strategic advantage
- in fulfilling its commercial purpose.
+On the other hand, real estate delivers value to consumers through design.
+ Real estate design is the province of architects and urban planners and
+ the best firms incorporate them on their team.
+ These professionals are experts in consumer preference and craft a strategy
+ for building design responsive to location and environmental context that
+ creates a strategic advantage in fulfilling its commercial purpose.
  Time and time again, we see well designed and operated buildings maintaining
  high occupancy and earning premium rents in markets and neighborhoods that
  otherwise would be regarded as highly competitive.
@@ -488,8 +475,7 @@ Real estate and credit are special cases.
 \end_layout
 
 \begin_layout Standard
-Unlike equity strategies where value is created after the acquisition, credit
- strategies achieve their success mostly through their access to deal pipeline
+Credit strategies achieve their success through their access to deal pipeline
  and discipline and diligence in deciding whether or not to make a loan.
  Credit firms must have sourcing operation with extensive relationships
  across the industry they serve.
@@ -559,7 +545,7 @@ Every firm has a critical internal customer set in the people who work there.
 \end_layout
 
 \begin_layout Section*
-Organization
+ORGANIZATION
 \end_layout
 
 \begin_layout Standard
@@ -593,9 +579,9 @@ You will start evaluating an organization simply by looking at the size
 
 \begin_layout Standard
 Firm culture will be critical in the success of the firm and its investments.
- One of the biggest challenges for a private markets is dealing with situations
- where a firm deteriorates because of internal conflict, shifts in focus
- or unplanned transitions.
+ One of the biggest challenges for a private markets investor is dealing
+ with situations where a firm deteriorates because of internal conflict,
+ shifts in focus or unplanned transitions.
  These situations typically are associated with poor investment results
  and if you can screen out firms at risk for these outcomes, you will enhance
  your investment results.
@@ -616,7 +602,6 @@ at bat
  and talent, the firm never really gets off the ground.
  As the firm progresses, the founders are then faced with the task of transition
 ing from deal culture to firm culture.
- Leadership style at this point becomes critical.
  
 \end_layout
 
@@ -655,7 +640,7 @@ Compensation and employment terms are important.
  deteriorate if the riches created are not properly shared.
  Persons in authority who accept rewards for themselves without first taking
  care of their teams are creating an intrinsically toxic environment.
- As the firm evolves, if will develop formalized and for more senior personnel
+ As the firm evolves, it will develop formalized and for more senior personnel
  contractual arrangements for sharing profit.
  Careers are emphasized and career conversations about what this job means
  to each person occur regularly.
@@ -679,17 +664,15 @@ Assessing these things is difficult for an investor, but important.
  ten to fifteen years.
  One sees firms that ossify or disintegrate in that time frame and contractual
  protections rarely provide adequate remedies.
- In my own case, I use a thought experiment to help myself with this decision
- – I have adult children and I ask myself if this firm is a place I would
- want them to work.
+ In my own case, I use a thought experiment to help myself firm is a place
+ I would want them to work.
  Will they be continuously challenged with projects and duties of increasing
- complexity as their skills grow.
- Will they receive regular candid feedback and will they receive financial
- rewards commensurate with the value of their work.
- Will they advance in a career path suited to them providing opportunities
- for technical excellence or the chance lead a team or a business line.
- Will the culture, however demanding, avoid hazing rituals and allow them
- to grow as individuals with interests and relationships beyond work.
+ complexity as their skills grow? Will they receive regular candid feedback
+ and will they receive financial rewards commensurate with the value of
+ their work? Will they advance in a career path suited to them providing
+ opportunities for technical excellence or the chance lead a team or a business
+ line? Will the culture, however demanding, avoid hazing rituals and allow
+ them to grow as individuals with interests and relationships beyond work?
  If it's a good place to work where you'd be proud for your children to
  be associated with it, then it has a decent chance of surviving and thriving.
 \end_layout
@@ -713,6 +696,9 @@ We understand all that, but care about track record anyway.
  We care about it because it is the one unfudgeable and unspinnable piece
  of evidence we have that might help us assess whether the firm has created
  a quality culture and is pursuing a robust strategy.
+ Track record is evidence of talent and one hopes that talent will be sustained
+ and grow with experience and maturity in the context of a high quality
+ firm.
  What follows is a somewhat detailed explanation for calculating performance
  metrics for private equity style investments where investments are illiquid
  and market timing is determined by an investment manager with a sequence
@@ -759,49 +745,21 @@ Traditional Methods of Performance Measurement
 \end_layout
 
 \begin_layout Standard
-Comparing private equity performance to public markets presents technical
- challenges.
- The usual way to compare two investments is with time weighted returns.
- This works with liquid investments where the investor can choose which
- assets to own and in what weight.
- For example, you can use time weighted returns to properly compare the
- performance of large cap stocks with small cap stocks over whatever time
- frame is of interest to you.
-\end_layout
-
-\begin_layout Standard
-Private equity doesn't work the same way.
- PE investments are typically in the form of limited partnership interests
- with subscription agreements pursuant to which the financial sponsor has
- the right to control the amount and timing of capital which is called in
- to the partnership.
- So, the amount of capital deployed varies over time and the investor has
- no control over the timing of calls or distributions for the investment.
- In this context, time weighted return calculations are not useful in understand
-ing the performance of a private equity investment because the variability
- in the amount of capital deployed will typically be very large.
+Time weighted returns are the standard methodology for evaluating and comparing
+ investment performance in liquid markets.
+ They are not appropriate for PE investments which are typically in the
+ form of limited partnership interests and the financial sponsor has the
+ right to control the amount and timing of capital called in to the partnership
+ resulting in an ever changing amount of capital deployed.
  
 \end_layout
 
 \begin_layout Standard
-The traditional performance metrics for private equity are DPI, TVPI and
- IRR.
- DPI stands for distributions as a percent of invested and is calculated
- as the sum of distributions received divided by the sum of capital contribution
-s made.
- TVPI is "total value as a percent of invested" and calculates the "total
- value" as the sum of distributions plus the value of the unrealized assets
- still owned by the partnership divided, again, by the sum of the capital
- calls.
- IRR is the internal rate of return, customarily expressed as an annual
- interest rate, calculated on the cash flows with the capital calls expressed
- as negative numbers and including the final cash flow as part of the time
- series for the calculation.
- 
-\end_layout
-
-\begin_layout Standard
-These traditional measures collectively give a good sense of the performance
+The traditional performance metrics for private equity are TVPI and IRR.
+ TVPI is "total value as a percent of invested" and is simply the ratio
+ of value received to investment.
+ IRR refers, of course to internal rate of return.
+ These traditional measures collectively give a good sense of the performance
  of a particular PE investment and allow you to compare private equity investmen
 ts to each other.
  Data services tracking private equity use a combination of these metrics
@@ -821,19 +779,19 @@ Public Market Equivalent methods
 Controlling for market context by vintage is useful but still crude because
  there is a lot of variability of patterns of calling and returning capital
  from fund to fund.
- A number of authors proposed methods for this, but Steve Kaplan and Antoinette
- Schoar wrote an influential article exploring private equity performance
- 
+ A good method to compare private market IRRs with public markets is what
+ is needed.
+ Steve Kaplan and Antoinette Schoar formulated a method for calculating
+ private equity performance as a "public market equivalent" which we will
+ refer to as KSPME 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Kaplan2005"
 literal "false"
 
 \end_inset
 
- .
- In this article they formulated a method for calculating private equity
- performance as a "public market equivalent" which we will refer to as KSPME.
+.
  KSPME is calculated as ratio of benefits to costs and a value greater than
  1 indicates performance above the opportunity cost benchmark.
  The calculation is illustrated in the following formulas.
@@ -988,9 +946,9 @@ KSPME is a wealth measure reflecting how much extra money you have by investing
 
 \begin_layout Standard
 Gredil, Griffiths and Stucke have proposed an additional metric, called
- "Direct Alpha", which converts KSPME to annual rate.
+ "Direct Alpha", which converts KSPME to annual rate 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Gredil2014"
 literal "false"
 
@@ -1076,447 +1034,31 @@ KSPME and Direct Alpha supplement the traditional private equity performance
  to public returns.
  In effect, these methods accurately measure the opportunity cost of public
  market investments foregone with the allocation to private markets.
-\end_layout
-
-\begin_layout Subsection*
-Illustration of calculations of private equity performance measurements
- in R
-\end_layout
-
-\begin_layout Standard
-For those interested, we provide here detatiled mechanics for calculating
- PME.
- The code and data are found on the earlier referenced Github site.
- We work from a hypothetical data set of private equity cash flows and valuation
-s with dates for each entry.
- Although this is a limited data set covering only four investments, the
- exact same code will work on a large data set with thousands of entries
- for hundreds of investments.
- That's the beauty of coding – the algorithm doesn't grow in size simply
- because the data set has.
- 
-\end_layout
-
-\begin_layout Standard
-First, we read in the data and show its initial form.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk2, message=FALSE, warning=FALSE>>= 
-\end_layout
-
-\begin_layout Plain Layout
-
-library(tseries) 
-\end_layout
-
-\begin_layout Plain Layout
-
-library(zoo) 
-\end_layout
-
-\begin_layout Plain Layout
-
-pedata=read.csv('pedata.csv') 
-\end_layout
-
-\begin_layout Plain Layout
-
-pedata$date=as.Date(pedata$date,format='%m/%d/%Y') 
-\end_layout
-
-\begin_layout Plain Layout
-
-unique(pedata$fund) 
-\end_layout
-
-\begin_layout Plain Layout
-
-head(pedata)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We now calculate a combined cash flow and valuation for the portfolio and
- an additional investment labeled 
-\begin_inset Quotes eld
-\end_inset
-
-Total
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-pedata=split(pedata,pedata$type) 
-\end_layout
-
-\begin_layout Plain Layout
-
-total.c=data.frame(fund="Total",
-\end_layout
-
-\begin_layout Plain Layout
-
-		aggregate(value~date,pedata$C,sum),type="C")
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-total.v=data.frame(fund="Total",
-\end_layout
-
-\begin_layout Plain Layout
-
-		aggregate(value~date,pedata$V,sum),type="V")  
-\end_layout
-
-\begin_layout Plain Layout
-
-pedata=rbind(pedata$C,pedata$V,total.c,total.v) 
-\end_layout
-
-\begin_layout Plain Layout
-
-tail(pedata)
-\end_layout
-
-\begin_layout Plain Layout
-
-@ 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Next we download the Russell 2000 index from Yahoo finance.
- R can handle other data services, but we use Yahoo because it's available
- to anybody at no charge.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk3, message=FALSE, warning=FALSE>>= 
-\end_layout
-
-\begin_layout Plain Layout
-
-r2k=get.hist.quote('^RUT',min(pedata$date)-5,
-\end_layout
-
-\begin_layout Plain Layout
-
-		max(pedata$date)+5, quote='AdjClose',
-\end_layout
-
-\begin_layout Plain Layout
-
-		provider='yahoo',retclass='zoo',quiet=TRUE)
-\end_layout
-
-\begin_layout Plain Layout
-
-r2k=na.locf(merge(r2k,
-\end_layout
-
-\begin_layout Plain Layout
-
-		zoo(,seq(start(r2k),end(r2k),by='day')),all=TRUE))
-\end_layout
-
-\begin_layout Plain Layout
-
-@ 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We now 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{merge}
-\end_layout
-
-\end_inset
-
- the index data with the private equity data set so that each entry in the
- data set has its related market index value.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk7>>= 
-\end_layout
-
-\begin_layout Plain Layout
-
-r2k=data.frame(date=time(r2k),index=as.numeric(r2k)) 
-\end_layout
-
-\begin_layout Plain Layout
-
-pedata=merge(pedata,r2k) 
-\end_layout
-
-\begin_layout Plain Layout
-
-head(pedata)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-We now 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{split}
-\end_layout
-
-\end_inset
-
- the data set in to a list of data frames, one for each fund and the total
- portfolio.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk6>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-pelist=split(pedata,pedata$fund) 
-\end_layout
-
-\begin_layout Plain Layout
-
-names(pelist) 
-\end_layout
-
-\begin_layout Plain Layout
-
-@ 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-I've written a function called 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{pe.performance}
-\end_layout
-
-\end_inset
-
- which processes data in the format of each of the data frames in 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{pelist}
-\end_layout
-
-\end_inset
-
-.
- The code for all the functions used in this post are listed at the end
- of the post.
- Having done the hard work of preparing the data for analysis, we can now
- calculate the performance statistics with only two lines of code.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk5>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-stats=lapply(pelist,pe.performance) 
-\end_layout
-
-\begin_layout Plain Layout
-
-stats.df=data.frame(lapply(stats,unlist)) 
-\end_layout
-
-\begin_layout Plain Layout
-
-round(stats.df,3) 
-\end_layout
-
-\begin_layout Plain Layout
-
-@  
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Here is an example of a way to graphically present the results.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<chunk4, message=FALSE, warning=FALSE, fig.width=10,fig.height=7,tidy=FALSE>>=
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-stats.df2=as.data.frame(t(as.matrix(stats.df)))
-\end_layout
-
-\begin_layout Plain Layout
-
-stats.df2=data.frame(name=colnames(stats.df),stats.df2) 
-\end_layout
-
-\begin_layout Plain Layout
-
-library(ggplot2) 
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(stats.df2,aes(x=ind.irr,y=irr,label=name,colour=kspme))+
-\end_layout
-
-\begin_layout Plain Layout
-
-	geom_text()+
-\end_layout
-
-\begin_layout Plain Layout
-
-	xlab("Market Return")+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-	ylab("Fund IRR")+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-	geom_abline(intercept=0,slope=1)+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-	ggtitle("Private Equity Performance")
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-PME methods are not a magic bullet, but they are very useful.
+ PME methods are not a magic bullet, but they are very useful.
  Prior to these methods, it was difficult to benchmark performance.
  PME methods provide a rigorous tool for assessing performance relative
  to market which is an essential starting point for assessing the quality
  of a firm and its strategies.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A detailed explanation with code and sample data demonstrating how to perform
+ PME analysis and other calculations described in this article is found
+ at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/karlpolen/pragmatics"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -1528,15 +1070,16 @@ One last topic on performance assessment deserves mention.
  As is well known, stock market returns are skewed with a few outliers contribut
 ing disproportionately to performance.
  Hank Bessembinder has shown that only 4% of stocks have contributed substantial
-ly all the outperformance of the stock market since the great depression.
+ly all the outperformance of the stock market since the great depression
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Bessembinder2019"
 literal "false"
 
 \end_inset
 
-We'd like to see a similar positive outlier type of skewness in our private
+.We'd like to see a similar positive outlier type of skewness in our private
  markets investments.
  The data sets are too small in private markets for any pretension of fancy
  statistics.
@@ -1568,21 +1111,9 @@ COST AND PARTNERSHIP TERMS
 
 \begin_layout Standard
 Private equity structures are complicated and difficult to analyze.
- We present here a quick and dirty analyzer of general partner compensation
+ We present here some approaches to analyze general partner compensation
  in real estate and private equity partnerships.
- It analyzes the outcomes across a range of performance scenarios in single
- period investment context.
- It is useful for analyzing the sharing of income between the GP and investors
- as income varies.
- 
-\end_layout
-
-\begin_layout Subsection*
-Background 
-\end_layout
-
-\begin_layout Standard
-Real estate and private equity investments are typically owned in a partnership
+ Real estate and private equity investments are typically owned in a partnership
  which includes a general partner (the "sponsor") and limited partners ("investo
 rs").
  The sponsor organizes the investment, recruits the investors and manages
@@ -1604,572 +1135,29 @@ The asset management fee is usually stated as a percent per annum of assets
 \end_layout
 
 \begin_layout Standard
-The asset management fee is generally not contingent on performance, but
- on occasion investors can negotiate a deferral of a portion of an asset
- management fee until a minimum investment hurdle rate of return is achieved.
- There is a great deal of variation in these arrangements and a person tasked
- with analyzing a partnership will need to refer to the partnership documents.
-\end_layout
-
-\begin_layout Standard
-In this post we only consider the case of asset management fees on invested
- capital, but we allow a portion of the fee to be deferred based on performance.
- In a later post, we will consider more complex structures in a multi-period
- project environment.
-\end_layout
-
-\begin_layout Standard
 The incentive fee ("carry") is typically stated as a percent of profits.
  Profits are normally defined as the gross profits of the investments after
  returning partnership expenses including the asset management fee.
  Usually, a hurdle rate of return must be achieved before sharing begins.
  So, a typical deal might be stated as "20% carry over an 8% pref with a
  50% catchup".
- This means that the partnership has to earn at least 8% return before the
- sponsor earns any carry.
+ This means that the investor has to earn at least an 8% return after fund
+ level costs before the sponsor earns any carry.
  Above an 8% return, the sponsor gets half the profit (i.e.
  the catchup is 50%) until the ratio of profit split is 20% to sponsor.
  Thereafter, the profits are split 80% to the investors and 20% to the sponsor.
  Incentive fees of 20% over an 8% hurdle are nearly universal in private
  equity.
- Although the catchup is negotiable, somewhere in the 50% to 100% range
- is typical.
+ But the catchup is negotiable, with somewhere in the 50% to 100% range
+ being typical.
  
 \end_layout
 
 \begin_layout Standard
-Real estate deals have greater variation.
- Many real estate deals have multiple layers, but no catchup.
- So, a real estate deal might be stated as "20 over 8, 30 over 12 and 50
- over 20".
- Stated this way, sponsor starts sharing 20% of profits once the investor
- earned an 8% return, switching to 30% of profits once the investor has
- earned a 12% return and 50% of profits once the investor has earned a 20%
- return.
+Figure 1 shows the fee at various gross returns for this structure.
+ Figure 2 shows the share going to sponsor and investor in this structure
+ with a 2% asset management fee.
  
-\end_layout
-
-\begin_layout Subsection*
-Private Equity Example
-\end_layout
-
-\begin_layout Standard
-Let's revisit the typical private equity structure ("20 over 8 with a 50%
- catchup").
- We will add a 2% asset management fee and consider the sharing of cash
- in the context of an investment with a hold period of exactly one year.
- We will now step through, in agonizing detail, each of the calculations
- for profit sharing.
-\end_layout
-
-\begin_layout Subsubsection*
-Level 0 -- the investment 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<PE1, echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-inv=100 
-\end_layout
-
-\begin_layout Plain Layout
-
-am=2 
-\end_layout
-
-\begin_layout Plain Layout
-
-capital=inv+am 
-\end_layout
-
-\begin_layout Plain Layout
-
-pref=capital*.08 
-\end_layout
-
-\begin_layout Plain Layout
-
-@  
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Invest $100 in an asset.
- In addition, the investor has to pay the asset management fee of $2.
- So, they have invested $102
-\end_layout
-
-\begin_layout Subsubsection*
-level 1 -- return of capital
-\end_layout
-
-\begin_layout Standard
-The first $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{capital}
-\end_layout
-
-\end_inset
-
- goes to pay back the investor's capital -- 
-\backslash
-$
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{capital}
-\end_layout
-
-\end_inset
-
- cumulative cash, 2% gross return, 0% net return
-\end_layout
-
-\begin_layout Subsubsection*
-level 2 -- pay pref
-\end_layout
-
-\begin_layout Standard
-The next 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{pref}
-\end_layout
-
-\end_inset
-
- dollars goes to cover the "pref" of 8%.
- $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{capital+pref}
-\end_layout
-
-\end_inset
-
- cumulative cash.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(100*(capital+pref-inv)/inv,1)}
-\end_layout
-
-\end_inset
-
-% gross return, 8% net return
-\end_layout
-
-\begin_layout Subsubsection*
-level 3 -- catchup
-\end_layout
-
-\begin_layout Standard
-We now start splitting 50/50 until the sponsor has 20% of the distributed
- profit
-\end_layout
-
-\begin_layout Standard
-Here we have a simple algebra problem
-\end_layout
-
-\begin_layout Standard
-We are looking for a value of 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$x$
-\end_layout
-
-\end_inset
-
- where
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$
-\backslash
-frac{.5x}{
-\backslash
-Sexpr{pref}+x}=.2$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let's solve for 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$x$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$x=
-\backslash
-Sexpr{.4*pref}+.4x$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$.6x=
-\backslash
-Sexpr{.4*pref}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$x=
-\backslash
-frac{
-\backslash
-Sexpr{.4*pref}}{.6} = 
-\backslash
-Sexpr{round(.4*pref/.6,2)}$$
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<PE2, echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-x=round(.4*pref/.6,2)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-So, the next 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{x}
-\end_layout
-
-\end_inset
-
- dollars are distributed 50/50.
-\end_layout
-
-\begin_layout Standard
-At this point, $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{capital+pref+x}
-\end_layout
-
-\end_inset
-
- has been distributed, of which $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(.5*x,2)}
-\end_layout
-
-\end_inset
-
- went to the sponsor as incentive fee.
- The gross return is 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(100*(-1+((capital+pref+x)/inv)),1)}
-\end_layout
-
-\end_inset
-
-% and the investor has received a net return of 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(100*(-1+((capital+pref+(.5*x))/100)),1)}
-\end_layout
-
-\end_inset
-
-%.
-\end_layout
-
-\begin_layout Subsubsection*
-level 4 -- parri passu
-\end_layout
-
-\begin_layout Standard
-Remaining cash is distributed 80/20.
- Suppose the asset is sold for $130.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<PE3,echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-price=130 
-\end_layout
-
-\begin_layout Plain Layout
-
-profit=price-inv 
-\end_layout
-
-\begin_layout Plain Layout
-
-grossroi=round(100*profit/inv,1) 
-\end_layout
-
-\begin_layout Plain Layout
-
-lpshare=.8*(price-capital) 
-\end_layout
-
-\begin_layout Plain Layout
-
-lproi=round(100*lpshare/capital,1) 
-\end_layout
-
-\begin_layout Plain Layout
-
-gpshare=.2*(price-capital)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The limited partner receives $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{capital}
-\end_layout
-
-\end_inset
-
- return of capital plus $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{lpshare}
-\end_layout
-
-\end_inset
-
-.
- The sponsor receives $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{gpshare}
-\end_layout
-
-\end_inset
-
- incentive fee in addition to the $
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{am}
-\end_layout
-
-\end_inset
-
- it received as an asset management fee.
-\end_layout
-
-\begin_layout Standard
-The gross return on the investment is 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{grossroi}
-\end_layout
-
-\end_inset
-
-%.
- The net return to the investor is 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{lproi}
-\end_layout
-
-\end_inset
-
-%.
-\end_layout
-
-\begin_layout Standard
-At the github site we've provided a function called 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texttt{waterfall}
-\end_layout
-
-\end_inset
-
- that automates these calculations.
- We illustrate its use for the private equity structure we have just stepped
- through.
 \end_layout
 
 \begin_layout Standard
@@ -2202,7 +1190,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<pe5>>=
+<<pe5, echo=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2212,12 +1200,12 @@ peinv=100
 
 \begin_layout Plain Layout
 
-pecap=102 
+pecap=100
 \end_layout
 
 \begin_layout Plain Layout
 
-dmat.pe=data.frame(am=0,pref=(.08*pecap),catchup=.5,carry=.2) 
+dmat.pe=data.frame(am=2,pref=(.08*pecap),catchup=.5,carry=.2) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2241,26 +1229,69 @@ ans.pe=waterfall(dmat.pe,ret=seq(100,130,.1),
 \end_layout
 
 \begin_layout Standard
-Here is a plot that shows the share going to sponsor and investor.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Analysis of private equity 
+\begin_inset Quotes eld
+\end_inset
+
+20 over 8 with 50% catch up
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<pe6,fig.width=7, fig.height=5>>=
+<<pe6,echo=FALSE,fig.width=3.5, fig.height=3>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-plot(ans.pe$grossreturn,ans.pe$grossreturn,type='l',
+plot(ans.pe$grossreturn,
 \end_layout
 
 \begin_layout Plain Layout
 
-	col='red',xlab='Gross Return',ylab='Return')
+	ans.pe$grossreturn-ans.pe$netreturn,type='l',
+\end_layout
+
+\begin_layout Plain Layout
+
+	col='blue',xlab='Gross Return',ylab='Fee')
 \end_layout
 
 \begin_layout Plain Layout
@@ -2269,17 +1300,21 @@ plot(ans.pe$grossreturn,ans.pe$grossreturn,type='l',
 
 \begin_layout Plain Layout
 
-lines(ans.pe$grossreturn,ans.pe$netreturn,type='l',col='blue') 
+#lines(ans.pe$grossreturn,ans.pe$netreturn,type='l',col='blue') 
 \end_layout
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),
+#legend('topleft',legend=c('Gross Return','Net Return'),
 \end_layout
 
 \begin_layout Plain Layout
 
-	col=c('red','blue'),lwd=1) 
+#	col=c('red','blue'),lwd=1) 
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2287,22 +1322,56 @@ legend('topleft',legend=c('Gross Return','Net Return'),
 @
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+General Partner Fee as Function of Gross Return
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-This plot shows the share of profit going to the GP on the margin.
-\end_layout
+\end_inset
 
-\begin_layout Standard
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<pe7,fig.width=7, fig.height=5>>=
+<<pe7,echo=FALSE,fig.width=3.5, fig.height=3>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2327,11 +1396,6 @@ plot(ans.pe$grossreturn[-1],gpcut,
 
 \begin_layout Plain Layout
 
-	main=('Marginal Share of Return to Sponsor'), 
-\end_layout
-
-\begin_layout Plain Layout
-
 	xlab='Gross Return', ylab='Percent',
 \end_layout
 
@@ -2350,30 +1414,42 @@ plot(ans.pe$grossreturn[-1],gpcut,
 
 \end_layout
 
-\begin_layout Standard
-As you can see, the share to the GP increases to 50% during the catchup
- phase.
- It then drops to 20% for returns above the breakeven where the GP has 20%
- of the cumulative profits.
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Marginal Share of Return to Sponsor
 \end_layout
 
-\begin_layout Subsection*
-Real Estate Structure Example
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Let's do the same for the real estate example where the incentive fee is
- 
-\begin_inset Quotes eld
-\end_inset
-
-20 over 8, thirty over 12 and 50 over 20
-\begin_inset Quotes erd
-\end_inset
-
-.
- In this case, we illustrate where there is a 2% asset management fee but
- half the fee is deferred until the investor has achieved an 8% return.
+Real estate deals have greater variation.
+ Many real estate deals have multiple layers, but no catchup.
+ So, a real estate deal might be stated as "20 over 8, 30 over 12 and 50
+ over 20 with a 2% asset management fee, half of which is deferred until
+ after 8%".
+ Stated this way, sponsor starts sharing 20% of profits once the investor
+ earned an 8% return, switching to 30% of profits once the investor has
+ earned a 12% return and 50% of profits once the investor has earned a 20%
+ return.
+ Only 1% of the asset management fee is paid unconditionally.
+ The remainder is paid once the investor has earned 8%.
+ Figure 3 shows the fee under this structure and figure 4 shows the marginal
+ share of earnings going to the sponsor at various gross returns.
 \end_layout
 
 \begin_layout Standard
@@ -2382,7 +1458,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<pe8>>=
+<<pe8,echo=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2392,12 +1468,12 @@ reinv=100
 
 \begin_layout Plain Layout
 
-recap=101 
+recap=100 
 \end_layout
 
 \begin_layout Plain Layout
 
-dmat.re=data.frame(am=c(0,1,0),pref=c(.08,.12,.20)*recap,
+dmat.re=data.frame(am=c(1,1,0),pref=c(.08,.12,.20)*recap,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2425,26 +1501,68 @@ ans.re=waterfall(dmat.re,ret=seq(100,130,.1),invcost=reinv,capital=recap)
 \end_layout
 
 \begin_layout Standard
-Here is a plot that shows the share going to sponsor and investor.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Analysis of real estate structure 
+\begin_inset Quotes eld
+\end_inset
+
+20 over 8, 30 over 12, 50 over 20 with half of asset management deferred
+ until after 8
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<pe9,fig.width=7, fig.height=5>>=
+<<pe9,echo=FALSE,fig.width=3.5, fig.height=3>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-plot(ans.re$grossreturn,ans.re$grossreturn,type='l',
+plot(ans.re$grossreturn,
 \end_layout
 
 \begin_layout Plain Layout
 
-	col='red',xlab='Gross Return',ylab='Return')
+	ans.re$grossreturn-ans.re$netreturn,type='l',
+\end_layout
+
+\begin_layout Plain Layout
+
+	col='blue',xlab='Gross Return',ylab='Fee')
 \end_layout
 
 \begin_layout Plain Layout
@@ -2453,17 +1571,17 @@ plot(ans.re$grossreturn,ans.re$grossreturn,type='l',
 
 \begin_layout Plain Layout
 
-lines(ans.re$grossreturn,ans.re$netreturn,type='l',col='blue') 
+#lines(ans.re$grossreturn,ans.re$netreturn,type='l',col='blue') 
 \end_layout
 
 \begin_layout Plain Layout
 
-legend('topleft',legend=c('Gross Return','Net Return'),
+#legend('topleft',legend=c('Gross Return','Net Return'),
 \end_layout
 
 \begin_layout Plain Layout
 
-	col=c('red','blue'),lwd=1) 
+#	col=c('red','blue'),lwd=1) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2476,17 +1594,50 @@ legend('topleft',legend=c('Gross Return','Net Return'),
 
 \end_layout
 
-\begin_layout Standard
-This plot shows the share of profit going to the GP on the margin.
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fees as Function of Gross Return
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<pe10,fig.width=7, fig.height=5>>=
+<<pe10,echo=FALSE,fig.width=3.5, fig.height=3>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2511,11 +1662,6 @@ plot(ans.re$grossreturn[-1],gpcut,
 
 \begin_layout Plain Layout
 
-	main=('Marginal Share of Return to Sponsor'), 
-\end_layout
-
-\begin_layout Plain Layout
-
 	xlab='Gross Return', ylab='Percent',
 \end_layout
 
@@ -2534,28 +1680,48 @@ plot(ans.re$grossreturn[-1],gpcut,
 
 \end_layout
 
-\begin_layout Standard
-As you can see, the GP share spikes when they recover their share of the
- deferred management fee, then follows the stairstep of 20%, 30% and 50%
- shares of profit above the hurdle rates delivered to the investor.
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Marginal Share of Return to Sponsor
 \end_layout
 
-\begin_layout Standard
-These calculations are tricky and a source of endless frustration for analysts
- entering the profession.
- For those willing to suffer learning a bit of coding, functions like the
- one provided can help.
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
-Consideration of skewness
+Fee Effectiveness
 \end_layout
 
 \begin_layout Standard
-We will now use the waterfall function to analyze the skewness of net returns
- in a private equity structure a 1.5% management fee and incentive of 20%
- over an 8% preferred return with an 80% catchup.
+As part of evaluating an investment program, you will inevitably be asked
  
+\begin_inset Quotes eld
+\end_inset
+
+did you receive value for the fees you paid?
+\begin_inset Quotes erd
+\end_inset
+
+ I think the best way to look at this is by considering fees as a percent
+ of excess profits.
+ Let's revisit the real estate example structure and suppose that we consider
+ 6% to be a reasonable hurdle rate for real estate.
+ Figure 5 shows the fees paid under that structure as a percent of excess
+ return.
 \end_layout
 
 \begin_layout Standard
@@ -2564,22 +1730,42 @@ status open
 
 \begin_layout Plain Layout
 
-<<skew1>>=
+<<ce2,echo=FALSE,warning=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-dmat.df=data.frame(am=1.5,pref=8,catchup=.8,carry=.2) 
+df=data.frame(Gross_Return=ans.re$grossreturn,
 \end_layout
 
 \begin_layout Plain Layout
 
-ret=100+seq(-20,30,.1) 
+	Net_Return=ans.re$netreturn) 
 \end_layout
 
 \begin_layout Plain Layout
 
-wat=waterfall(dmat.df,ret) 
+df$Fee=df$Gross_Return-df$Net_Return 
+\end_layout
+
+\begin_layout Plain Layout
+
+bench=6 #asuumed near term public market returns
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Excess_Return=df$Gross_Return-bench 
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Excess_Return[df$Excess_Return<=0]=NA 
+\end_layout
+
+\begin_layout Plain Layout
+
+df$Slice_to_GP=pmin(1,df$Fee/df$Excess_Return)*100 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2592,25 +1778,119 @@ wat=waterfall(dmat.df,ret)
 
 \end_layout
 
-\begin_layout Subsubsection*
-Calculating net returns given a probability distribution assumption for
- gross returns
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fee Effectiveness for Real Estate Example
 \end_layout
 
-\begin_layout Standard
-Suppose we think gross returns are normally distributed, with a mean of
- 15% and standard deviation of 15%.
- How are the net returns distributed? The below code makes these calculations
- and presents a comparative density function.
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<skew2>>=
+<<ce3,echo=FALSE,warning=FALSE,fig.height=3.5,fig.width=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(df$Gross_Return,df$Slice_to_GP,type='l',col='blue',
+\end_layout
+
+\begin_layout Plain Layout
+
+	ylab=
+\begin_inset Quotes erd
+\end_inset
+
+Fee as % of Excess Return
+\begin_inset Quotes erd
+\end_inset
+
+,xlab=
+\begin_inset Quotes erd
+\end_inset
+
+Gross Return
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Consideration of skewness
+\end_layout
+
+\begin_layout Standard
+Investment results are skewed by these compensation structures.
+ Investors own all of the downside but share the upside with the sponsor.
+ Suppose we think for a particular investment gross returns are normally
+ distributed, with a mean of 15% and standard deviation of 15%.
+ How are the net returns distributed? Figure 6 shows the skewness of net
+ returns using the multi-tier real estate structure described previously.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Illustration of Skewness of Net Returns for Real Estate Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<skew2,echo=FALSE,fig.height=3,fig.width=5>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -2645,7 +1925,7 @@ ret2=100+rep(ret.seq,ret.count)
 
 \begin_layout Plain Layout
 
-wat2=waterfall(dmat.df,ret2)
+wat2=waterfall(dmat.re,ret2)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2655,22 +1935,12 @@ with(wat2,plot(density(netreturn),col='blue',
 
 \begin_layout Plain Layout
 
-	main='Return Density',xlab='Gross Return')) 
+	main='',xlab='Return')) 
 \end_layout
 
 \begin_layout Plain Layout
 
-with(wat2,lines(density(grossreturn),col='red')) 
-\end_layout
-
-\begin_layout Plain Layout
-
-legend('topleft',legend=c('Gross Return','Net Return'),
-\end_layout
-
-\begin_layout Plain Layout
-
-	col=c('red','blue'),lwd=1)
+with(wat2,lines(density(grossreturn),lty=2)) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2683,250 +1953,12 @@ legend('topleft',legend=c('Gross Return','Net Return'),
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<skew3, echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-#with(wat2,plot(ecdf(netreturn),col='blue',pch=20, main='Cumulative Density',xla
-b='Gross Return')) 
-\end_layout
-
-\begin_layout Plain Layout
-
-#lines(ret.seq,pnorm(ret.seq,mu,sd),col='red',lwd=3) 
-\end_layout
-
-\begin_layout Plain Layout
-
-#legend('topleft',legend=c('Gross Return','Net Return'),col=c('red','blue'),lwd=
-3)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-As you can see, the net returns are skewed to the low return side if you
- assume normally distributed gross returns.
- This is why we are looking for managers with a track record for positive
- skewness in their gross returns.
-\end_layout
-
-\begin_layout Standard
-Next we show the distribution of fees with a vertical dotted line at the
- mean fee.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<skew4>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-fee=wat2$grossreturn-wat2$netreturn 
-\end_layout
-
-\begin_layout Plain Layout
-
-mean.fee=mean(fee) 
-\end_layout
-
-\begin_layout Plain Layout
-
-plot(density(fee,from=min(fee)),col='purple',lwd=2, 
-\end_layout
-
-\begin_layout Plain Layout
-
-	main='Fee Distribution', xlim=c(1,14))
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-abline(v=mean.fee,lty='dotted',col='purple') 
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-It you want an estimate of what your fees are likely to be, this is a way
- to calculate it.
-\end_layout
-
-\begin_layout Subsection*
-Fee Effectiveness
-\end_layout
-
-\begin_layout Standard
-As part of evaluating an investment program, you will inevitably be asked
- 
-\begin_inset Quotes eld
-\end_inset
-
-did you receive value for the fees you paid?
-\begin_inset Quotes erd
-\end_inset
-
- I think the best way to look at this is by considering fees as a percent
- of excess profits.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<ce1,message=FALSE, warning=FALSE, echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-library(ggplot2,quietly=TRUE,verbose=FALSE) 
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let's setup a PE investment with market standard terms of 1.5% asset management
- fee, 20% carry over an 8% hurdle with an 80% catchup.
- First we show a plot the fee as a function of gross return.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<ce2,warning=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-dmat.pe=data.frame(am=1.5,pref=8,catchup=.8,carry=.2) 
-\end_layout
-
-\begin_layout Plain Layout
-
-ans.pe=waterfall(dmat.pe,ret=seq(100,130,.1)) 
-\end_layout
-
-\begin_layout Plain Layout
-
-df=data.frame(Gross_Return=ans.pe$grossreturn,
-\end_layout
-
-\begin_layout Plain Layout
-
-	Net_Return=ans.pe$netreturn) 
-\end_layout
-
-\begin_layout Plain Layout
-
-df$Fee=df$Gross_Return-df$Net_Return 
-\end_layout
-
-\begin_layout Plain Layout
-
-bench=6 #asuumed near term public market returns
-\end_layout
-
-\begin_layout Plain Layout
-
-df$Excess_Return=df$Gross_Return-bench 
-\end_layout
-
-\begin_layout Plain Layout
-
-df$Excess_Return[df$Excess_Return<=0]=NA 
-\end_layout
-
-\begin_layout Plain Layout
-
-df$Slice_to_GP=pmin(1,df$Fee/df$Excess_Return) 
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(df,aes(x=Gross_Return,y=Fee))+geom_line() 
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now we show a plot of the fee as a percent of the excess return.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<ce3,warning=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(df,aes(x=Gross_Return,y=Slice_to_GP)) + geom_line()
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -3095,23 +2127,21 @@ l investment fund at reduced or no fees.
  are allocated partly to the co-invest vehicles.
  Josh Lerner and Antoinette Schoar analyzed a large database of investments
  in these types of alternate vehicles and concluded that the alternate structure
-s underperformed the related fund investments for many investors.
+s underperformed the related fund investments for many investors 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "Schoar2018"
+LatexCommand citep
+key "Lerner2018"
 literal "false"
 
 \end_inset
 
+.
  If you are going to pursue alternate and larger structures you will need
  to mitigate the risk of increased concentration through an appropriate
  partnership structure with adequate rights to ensure strategy discipline
- and liquidity rights to end investment periods and/or liquidate investments
- in the investor's discretion.
- The rewards can be greater with strategic relationship when they are well
- conceived and well managed, but the approach is not without risk and is
- not advised for investors without the requisite experience to diligize
- the strategy and properly structure the legal arrangement.
+ and liquidity rights.
+ Just pursuing a larger relationship in order to negotiate lower fees may
+ not add value.
 \end_layout
 
 \begin_layout Subsection*
@@ -3121,10 +2151,9 @@ Information rights
 \begin_layout Standard
 An area of ongoing frustration for me has been the quality and timeliness
  of information delivered to investors.
- While some sponsors do an excellent job, there are many who fall short.
- With advances in technology, accounting systems have rapidly moved toward
- real time dashboard type environments.
- Private equity shouldn't be any different.
+ Investors often receive information which is partial, not consistently
+ presented from quarter to quarter and heavily spun by the firm's marketing
+ department.
  Investors should have access to real financial statements for each of the
  portfolio investments, prepared in accordance with GAAP consistently applied
  and delivered promptly.
@@ -3136,15 +2165,7 @@ An area of ongoing frustration for me has been the quality and timeliness
 \end_layout
 
 \begin_layout Standard
-What is actually delivered to investors is far too often partial information,
- not consistently presented from quarter to quarter and heavily spun by
- the firm's marketing department.
- It's puzzling to me that many asset managers do not find it relevant to
- strive for excellence in this area in order to add value to their investors.
- In a separate account arrangement, this can be addressed and the manager
- will not incur any additional cost because of it.
- If the manager is competent enough to earn your investment, they already
- have this information and just need to share it with you.
+
 \end_layout
 
 \begin_layout Section*
@@ -3155,7 +2176,7 @@ THE UPSHOT
 When I started to write this paper, I thought it was going to be about the
  quantitative methods.
  I've written code which I believe could be a minor, but useful addition
- to the field.
+ to the field and made it available on a github repository.
  It quickly dawned on me that this would create the wrong impression, as
  though implementing these quantitative tricks would lead to a successful
  investment program.

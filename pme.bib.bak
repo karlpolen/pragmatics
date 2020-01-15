@@ -42,9 +42,16 @@
 
 @Article{Bessembinder2019,
   author  = {Hendrik Bessembinder},
-  title   = {Do Global Stocks Outperform US Treasury Bills},
+  title   = {Do Global Stocks Outperform US Treasury Bills?},
   journal = {available at SSRN},
   year    = {2019},
+}
+
+@Article{Schoar2018,
+  author  = {Josh Lerner and Antoinette Schoar and Jason Mao and Nan R. Zhang},
+  title   = {Investing Outside the Box: Evidence from Alternative Vehicles in Private Capital},
+  journal = {Available at National Bureau of Economic Research},
+  year    = {2018},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
