@@ -1725,6 +1725,46 @@ did you receive value for the fees you paid?
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Further Analysis of the 
+\begin_inset Quotes eld
+\end_inset
+
+20 over 8, 30 over 12, 50 over 20 with half of asset management deferred
+ until after 8
+\begin_inset Quotes erd
+\end_inset
+
+ structure
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1778,24 +1818,6 @@ df$Slice_to_GP=pmin(1,df$Fee/df$Excess_Return)*100
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fee Effectiveness for Real Estate Example
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Plain Layout
 \begin_inset ERT
 status open
@@ -1841,35 +1863,11 @@ Gross Return
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Consideration of skewness
-\end_layout
-
-\begin_layout Standard
-Investment results are skewed by these compensation structures.
- Investors own all of the downside but share the upside with the sponsor.
- Suppose we think for a particular investment gross returns are normally
- distributed, with a mean of 15% and standard deviation of 15%.
- How are the net returns distributed? Figure 6 shows the skewness of net
- returns using the multi-tier real estate structure described previously.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Illustration of Skewness of Net Returns for Real Estate Example
+Fee Effectiveness
 \end_layout
 
 \end_inset
@@ -1877,12 +1875,30 @@ Illustration of Skewness of Net Returns for Real Estate Example
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset VSpace bigskip
 \end_inset
 
 
-\end_layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1890,7 +1906,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<skew2,echo=FALSE,fig.height=3,fig.width=5>>=
+<<skew2,echo=FALSE,fig.height=3.5,fig.width=5>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -1953,26 +1969,39 @@ with(wat2,lines(density(grossreturn),lty=2))
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Skewness of Net Returns
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-As you can see, the net returns are skewed to the low return side if you
- assume normally distributed gross returns.
- This is why we are looking for managers with a track record for positive
- skewness in their gross returns.
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Consideration of skewness
 \end_layout
 
 \begin_layout Standard
-Next we show the distribution of fees with a vertical dotted line at the
- mean fee.
-\end_layout
-
-\begin_layout Standard
-It you want an estimate of what your fees are likely to be, this is a way
- to calculate it.
+Investment results are skewed by these compensation structures.
+ Investors own all of the downside but share the upside with the sponsor.
+ Suppose we think for a particular investment gross returns are normally
+ distributed, with a mean of 15% and standard deviation of 15%.
+ How are the net returns distributed? Figure 6 shows the skewness of net
+ returns using the multi-tier real estate structure described previously.
 \end_layout
 
 \begin_layout Subsection*

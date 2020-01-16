@@ -741,7 +741,7 @@ Traditional Methods of Performance Measurement
 Time weighted returns are the standard methodology for evaluating and comparing
  investment performance in liquid markets.
  They are not appropriate for PE investments which are typically in the
- form of limited partnership interests where the financial sponsor has the
+ form of limited partnership interests and the financial sponsor has the
  right to control the amount and timing of capital called in to the partnership
  resulting in an ever changing amount of capital deployed.
  
@@ -751,7 +751,7 @@ Time weighted returns are the standard methodology for evaluating and comparing
 The traditional performance metrics for private equity are TVPI and IRR.
  TVPI is "total value as a percent of invested" and is simply the ratio
  of value received to investment.
- IRR refers, of course, to internal rate of return.
+ IRR refers, of course to internal rate of return.
  These traditional measures collectively give a good sense of the performance
  of a particular PE investment and allow you to compare private equity investmen
 ts to each other.
@@ -761,7 +761,7 @@ ts to each other.
  based on the year the partnership began investing.
  So, a 2006 vintage fund which invested across the global financial crisis
  and earned a 10% IRR might be a top quartile performer for that vintage,
- while the same IRR might be below average for a 2010 vintage.
+ while the same IRR might be below average for a 2009 vintage.
 \end_layout
 
 \begin_layout Subsection*
@@ -1090,8 +1090,8 @@ slugging percentage
  if it's comfortably larger, we have evidence of the sort of skewness we
  are looking for.
  In the next section, we will analyze the effect of incentive compensation
- on the skewness of net returns and you will see that positively skewed
- gross returns are needed to balance things out for the investor.
+ on the skewness of net returns and you will see that positively gross returns
+ are needed to balance things out for the investor.
 \end_layout
 
 \begin_layout LyX-Code
@@ -2052,7 +2052,7 @@ invested
  of eight years, the annual additional cost is a little less then 30bp per
  year.
  This is a fraction of the cost of the catchup, but still important.
- You need to keep in mind the big picture.
+ You need to keep in mind the whole picture.
  If your manager is smaller, they may need the early revenue to support
  a proper team for your strategy and you might better serve yourself by
  focusing on other areas for cost savings.
@@ -2199,6 +2199,10 @@ An area of ongoing frustration for me has been the quality and timeliness
  well.
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section*
 THE UPSHOT
 \end_layout
@@ -2253,9 +2257,9 @@ Negotiation of terms matters.
  The best way to think about cost is as a percent of excess return and we
  have presented methods for analyzing and understanding cost.
  Minimization of cost is not the goal.
- Indeed, if you are successful in selecting high performing strategies and
- management teams your absolute cost will be higher because you will pay
- more in incentive fees.
+ Indeed, if you are successful in selecting strategies and management teams
+ your absolute cost will be higher because you will pay more in incentive
+ fees.
  You need to negotiate fees keeping in mind the big picture – you want to
  encourage and support your partners to build and maintain high quality
  teams and the fees paid need to be consistent with that.
@@ -2268,10 +2272,13 @@ Negotiation of terms matters.
 \end_layout
 
 \begin_layout Standard
-How has this worked out for ASRS? During the ten years I've worked at ASRS,
- it has built a private markets program consisting of real estate, private
- equity and credit that now amounts to about 40% of its fund value and is
- targeted to be about 50% of the fund in coming years.
+How has this worked out for ASRS? I've consciously said very little about
+ my employer.
+ But I've worked at ASRS for ten years mostly as Head of Private Markets
+ Investing and the last four years as CIO.
+ We have built a private markets program consisting of real estate, private
+ equity and credit that now amounts to about 40% of our fund and is targeted
+ to be about 50% of the fund in coming years.
  Over that ten year period, the private markets investments have exceeded
  their benchmarks with annual excess returns for the ten year period of
  1.7% for private equity, 2.7% for real estate and 5.1% for credit.
